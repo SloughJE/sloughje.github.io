@@ -1,145 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Freelance Data Scientist</title>
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-  }
-  header {
-    background-color: #222;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-  }
-  .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-  }
-  .about, .portfolio, .contact {
-    padding: 4rem 0;
-    text-align: center;
-  }
-  .contact form {
-    max-width: 300px;
-    margin: auto;
-  }
-  .contact input, .contact textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ccc;
-  }
-  .contact input[type=submit] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  .contact input[type=submit]:hover {
-    opacity: 0.9;
-  }
-  footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-
-  nav {
-      background-color: #333;
-      overflow: hidden;
-    }
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-    .iframe-container {
-      position: relative;
-      overflow: hidden;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    }
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Data Scientist</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#ml-app">ML App</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="javascript:void(0);" onclick="openTab('landing')">Home</a>
+    <a href="javascript:void(0);" onclick="openTab('about')">About</a>
+    <a href="javascript:void(0);" onclick="openTab('services')">Services</a>
+    <a href="javascript:void(0);" onclick="openTab('portfolio')">Portfolio</a>
+    <a href="javascript:void(0);" onclick="openTab('contact')">Contact</a>
+  </nav>
+  
 
-<header>
-  <h1>Welcome to My Data Science Portfolio</h1>
-  <p>Insights with Elegance & Precision</p>
-</header>
+  <header>
+    <h1>Welcome to My Data Science Portfolio</h1>
+    <p>Insights with Elegance & Precision</p>
+  </header>
 
-<div class="container">
-  <section class="about">
-    <h2>About Me</h2>
-    <p>Experienced in turning data into actionable insights, with simplicity and efficiency.</p>
-  </section>
 
-  <section class="portfolio">
-    <h2>Portfolio</h2>
-    <p>Check out my latest projects.</p>
-    <!-- Add links to your project here -->
-  </section>
+  <div class="container">
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <form action="YOUR_FORMSPREE_LINK" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <input type="submit" value="Send">
-    </form>
-  </section>
-</div>
+    <section id="landing" class="tabcontent" style="display: block;">
+        <h2>Unlock the Power of Your Data</h2>
+        <p>Transforming Data into Actionable Insights with Expert Data Science Solutions</p>
+        <button onclick="location.href='#contact';">Get Started</button>
+        <p>Your privacy is paramount. We never share your information.</p>
+        <!-- Image can be added here -->
+        <img src="path-to-your-image.jpg" alt="Data Visualization">
+        
+        <!-- Benefits Section -->
+        <div class="benefits">
+          <div class="benefit-item">
+            <img src="icon-predictive-modeling.png" alt="Predictive Modeling">
+            <h3>Advanced Predictive Modeling</h3>
+            <p>Forecast with confidence and plan with precision.</p>
+          </div>
+          <!-- More benefit items can be added here -->
+        </div>
+    </section>
+      
+      <section id="about" class="tabcontent">
+        <h2>About John Slough II</h2>
+        <p>With years of experience in data science consulting, I've helped organizations transform complex data into actionable strategies. My expertise lies in not just analyzing data, but in crafting narratives that drive decision-making across various industries. From retail and manufacturing to healthcare and aerospace, I've navigated the unique challenges each sector presents and delivered tailored data-driven solutions.</p>
+      
+        <p>My journey in data science has been a blend of continuous learning and practical application. After obtaining a Master's in Statistics and an MBA, I delved into the world of consulting where I've helped businesses leverage data for competitive advantage. Whether it's through developing forecasting models to streamline operations or creating intuitive dashboards for real-time decision support, I've seen firsthand the transformative impact of well-applied data science.</p>
+      
+        <p>Among the highlights of my consulting tenure was collaborating with NASA to refine aircraft landing time predictions. This project not only enhanced air traffic management but also led to a <a href="https://aviationsystems.arc.nasa.gov/publications/2021/20210017594_Wesely_Aviation2021_paper.pdf" target="_blank">published article</a>, showcasing the project's success and the practical benefits of predictive analytics.</p>
+      
+        <p>My practical experience is complemented by projects that are close to my heart, like developing a machine learning solution for <a href="https://github.com/SloughJE/aerial_straps_classifier"target="_blank">classifying aerial straps poses</a>. It's a project that covers the full spectrum of data science work - from conception, data collection and preprocessing to model development and deployment. It exemplifies my commitment to real-world applications of machine learning, bridging the gap between theoretical models and practical solutions.</p>
 
-<section id="ml-app" class="ml-app">
+        <p>I offer services ranging from machine learning model development to setting up data visualizations and analysis pipelines. My approach is always to simplify without oversimplifying, ensuring that the insights are clear, concise, and, above all, actionable.</p>
+      
+        <p>If your business is looking to harness the power of data science without getting lost in technicalities, I am here to guide you through the journey. Let's unveil the stories hidden within your data together.</p>
+      
+        <!-- Professional photo -->
+        <img src="assets/LinkedInModProfile.jpg" alt="John Slough II" class="professional-photo">
+    </section>
+      
+      
+
+    <section id="services" class="tabcontent">
+        <h2>Professional Data Science Services</h2>
+        <p>I deliver end-to-end data science services, guiding projects from initial data wrangling to deploying robust applications. My expertise lies in transforming complex datasets into actionable insights and practical tools.</p>
+        
+        <h3>Core Offerings</h3>
+        <ul>
+          <li><strong>Data Strategy and Engineering:</strong> Defining data roadmaps and preparing datasets for in-depth analysis.</li>
+          <li><strong>Advanced Analytics and ML Development:</strong> Building predictive models and performing deep statistical analysis to drive business decisions.</li>
+          <li><strong>Visualization and Dashboarding:</strong> Crafting clear, dynamic visualizations with tools like Plotly and Dash, enhancing data comprehension.</li>
+          <li><strong>Operationalization and Deployment:</strong> Deploying solutions in scalable environments using AWS Sagemaker, GCR, and Docker, with comprehensive tracking via MLflow.</li>
+          <li><strong>API and Automation Services:</strong> Creating APIs for model integration and automating data pipelines for efficiency.</li>
+          <li><strong>Custom Solution Development:</strong> Tailoring analytics solutions to address unique industry challenges and objectives.</li>
+          <li><strong>Data Literacy and Team Training:</strong> Equipping teams with the knowledge to leverage data science tools and methodologies effectively.</li>
+        </ul>
+        
+        <h3>The Human Element in AI</h3>
+        <p>While AI and tools like ChatGPT are revolutionizing how we interact with data, the human element remains crucial. Understanding the nuances of your data, the context of your industry, and the strategic implications of analytical findings cannot be fully automated. My role is to bridge that gap, ensuring that AI serves as a powerful assistant, not a replacement, in the art of decision-making.</p>
+      
+        <p>Ready to enhance your business with data science that makes a difference? Reach out, and let's explore how we can turn your data into a strategic asset.</p>
+    </section>
+      
+      
+      
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="tabcontent">
+        <h2>Portfolio</h2>
+        <p>My portfolio showcases a selection of projects that demonstrate my expertise in data science, from innovative machine learning applications to interactive data visualization tools. Here's a glimpse into the work I've done:</p>
+      
+        <div class="project">
+            <h3>Aerial Straps Pose Classifier</h3>
+            <div class="image-container">
+              <img src="assets/straps_monarca_back_lever.jpg" alt="Aerial Straps Pose Classifier Thumbnail" class="project-thumbnail">
+              <img src="assets/straps_flow_chart.png" alt="Flowchart Diagram" class="project-thumbnail flowchart">
+            </div>
+            <p>An application leveraging computer vision and machine learning to classify aerial straps poses. This project illustrates an ML project from conception to deployment. It features OpenCV, MediaPipe, Optuna, MLflow, fastAPI, Docker, and GCR. It's deployed with a user-friendly web app for real-time predictions.</p>
+            <ul>
+              <li><a href="https://aerial-straps-classifier-n3pdpbqp5a-ue.a.run.app/" target="_blank">Live App</a></li>
+              <li><a href="https://github.com/SloughJE/aerial_straps_classifier" target="_blank">GitHub Repository</a></li>
+            </ul>
+          </div>
+          
+      
+        <div class="project">
+            <h3>Interactive Resume with Plotly Dash</h3>
+            <div class="image-container">
+              <img src="assets/resume_locations.png" alt="Interactive Resume Locations Screenshot" class="project-thumbnail">
+              <img src="assets/resume_experience.png" alt="Interactive Resume Experience Screenshot" class="project-thumbnail">
+            </div>
+            <p>An interactive resume created using Plotly Dash to dynamically present professional experience and skills through engaging visualizations.</p>
+            <ul>
+              <li><a href="https://slough.herokuapp.com/" target="_blank">Live App</a></li>
+              <li><a href="https://github.com/SloughJE/Resume" target="_blank">GitHub Repository</a></li>
+            </ul>
+        </div>
+          
+      
+        <div class="project">
+            <h3>Podcast Newsletter Processing and Summary Tool</h3>
+            <div class="image-container">
+              <img src="assets/podcast_summary.png" alt="Podcast Summary Screenshot" class="project-thumbnail">
+            </div>
+            <p>A tool that automates the processing of podcast episodes, transcribing them, and generating summaries and highlight images, showcased through a Streamlit app.</p>
+            <ul>
+              <li><a href="https://podcastsummary-jslough.streamlit.app/" target="_blank">Demo App</a></li>
+              <li><a href="https://github.com/SloughJE/podcast_summary" target="_blank">GitHub Repository</a></li>
+            </ul>
+        </div>
+          
+      
+        <div class="project">
+            <h3>Machine Learning for Predicting Aircraft Landing Times</h3>
+            <div class="image-container">
+              <img src="assets/nasa_error_dist.png" alt="NASA Error Distribution Visualization" class="project-thumbnail">
+              <img src="assets/nasa_waterfall.png" alt="NASA Waterfall Chart" class="project-thumbnail">
+            </div>
+            <p>This project involved developing a machine learning model to improve the accuracy of predicting aircraft landing times, integrating the model with real-time operational data for air traffic management.</p>
+            <ul>
+              <li><a href="https://aviationsystems.arc.nasa.gov/publications/2021/20210017594_Wesely_Aviation2021_paper.pdf" target="_blank">Research Paper</a></li>
+            </ul>
+        </div>
+          
+        
+        <p>These projects highlight my versatility in data science, from analytical research to full-stack development, all with a singular goal: turning data into decisive action.</p>
+    </section>
+      
+
+    <section id="contact" class="tabcontent">
+        <h2>Contact Me</h2>
+        <form action="YOUR_FORMSPREE_LINK" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="_replyto" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <input type="submit" value="Send">
+        </form>
+    </section>
+      
+  </div>
+
+  <!-- ML App Section -->
+  <section id="ml-app" class="tabcontent">
     <h2>Machine Learning Application</h2>
     <p>This is my Machine Learning project hosted on Google Cloud Run. Please interact with it below:</p>
     <div class="iframe-container">
-      <iframe src="https://aerial-straps-classifier-n3pdpbqp5a-ue.a.run.app/" frameborder="0" allowfullscreen></iframe>
+      <h2>Test!</h2>
+      <!--<iframe src="https://aerial-straps-classifier-n3pdpbqp5a-ue.a.run.app/" frameborder="0" allowfullscreen></iframe> -->
     </div>
   </section>
-  
 
-<footer>
-  <p>© 2023 by Freelance Data Scientist</p>
-</footer>
+  <footer>
+    <p>© 2023 by Freelance Data Scientist</p>
+  </footer>
+  
+  <script>
+    function openTab(tabName) {
+      var i, tabcontent;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+    // Set landing as the default tab
+    openTab('landing');
+  </script>
+  
 
 </body>
 </html>
