@@ -245,7 +245,7 @@ nav a.active {
     width: 65%; /* Adjust width to 100% to fill the container */
     height: 100%; /* Maintain aspect ratio */
     border-radius: 8px;
-    opacity: 0.4; /* Adjust opacity as needed */
+    opacity: .9; /* Adjust opacity as needed */
     display: block; /* Make sure the image is a block-level element to fit the container */
   }
   
