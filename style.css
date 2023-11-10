@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #E4DCCF;
+    background-color: #E4DCCF; /* #zircon sand */
     color: #333;
   }
   header {
@@ -292,7 +292,6 @@ nav a.active {
   
   /* General Section Styling */
 .tabcontent {
-    border-top: 2px solid #e4e4e4; /* Light grey border at the top of each section */
     padding: 50px 0; /* More vertical padding for breathing space */
     margin: 20px 0; /* Space between sections */
   }
@@ -411,3 +410,11 @@ nav a.active {
   .landing-cta {
     margin-bottom: 50px; /* Adjust the value as needed */
 }
+
+.section-divider {
+    background: linear-gradient(to left, #f0f0f0, #ebc78e);
+    height: 2px;
+    width: 100%;
+    margin: 50px 0;
+  }
+  
