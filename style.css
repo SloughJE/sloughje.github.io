@@ -82,7 +82,20 @@ body {
       border: none;
     }
 
+/* Add this to your style.css file */
 
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar stays on top of other elements */
+  }
+  
+  /* Add padding-top to the body to ensure the content is not hidden behind the fixed navbar */
+  body {
+    padding-top: 40px; /* Adjust this value to match the height of your navbar */
+  }
+  
 /* This will apply to the container of each project */
 .project {
     display: flex;
@@ -107,8 +120,294 @@ body {
   
   
   /* Add a class for the flowchart if you need specific styles, otherwise, it'll be treated like any other thumbnail */
-  .project-thumbnail.flowchart {
+  /*.project-thumbnail.flowchart {
     /* Styles if needed, otherwise this can be omitted if the flowchart has no special styling requirements */
+  /*}
+  
+/* Navigation Bar Active Link */
+nav a.active {
+    background-color: #F08080; /* Coral Pink for active links */
+    color: white; /* White text color for active links */
+    /*border-bottom: 3px solid #C06070; /* Darker shade for the bottom border */
   }
   
-    
+  /* For hovered links (optional, for better UX) */
+  nav a:hover {
+    background-color: #C06070; /* Darker pink for hover state */
+    color: white;
+    /*border-bottom: 3px solid #F08080; /* Darker shade for the bottom border */
+
+  }
+  
+/* FAQ Section */
+/* Style for the summary element */
+.faq-item summary {
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Style for the summary element on hover */
+  .faq-item summary:hover {
+    color: #000; /* Darker text to indicate interactivity */
+  }
+  
+  /* Reset the list marker style */
+  .faq-item details {
+    list-style: none;
+  }
+  
+  .faq-item details summary::-webkit-details-marker {
+    display: none; /* Hide the default arrow in webkit browsers */
+  }
+  
+  /* Optional: Style the 'open' state to give some feedback */
+  .faq-item[open] summary {
+    color: #C06070; /* Example: Change color when the item is open */
+  }
+  
+
+  .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  
+  .contact-form {
+    flex-basis: 45%;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  input[type="submit"] { /* Add input[type="submit"] here */
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    box-sizing: border-box; /* Ensure padding is within the width */
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus,
+  input[type="submit"]:focus { /* Add focus style for submit button if needed */
+    outline: none;
+    border-color: #555;
+  }
+  
+  /* If you have a separate class for the submit button, e.g., .cta-button, you would adjust that class instead. */
+  .cta-button {
+    width: 100%; /* This will make the button extend full width of its container */
+    padding: 1rem;
+    font-size: 1.2rem; /* Increased font size for the button as well */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #555;
+  }
+  
+  
+  .cta-button:hover {
+    background-color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-form, .contact-image {
+      flex-basis: 100%;
+    }
+  }
+  
+
+  .contact-image {
+    flex-basis: 50%;
+    position: relative; /* Make the container relative so the pseudo-element is positioned relative to the image */
+    overflow: hidden; /* This will ensure that the pseudo-element doesn't extend beyond the image */
+    display: flex;
+    justify-content: right; 
+    align-items: center; /* This will center the image verti */
+  }
+  
+  .contact-image img {
+    width: 65%; /* Adjust width to 100% to fill the container */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 8px;
+    opacity: 0.4; /* Adjust opacity as needed */
+    display: block; /* Make sure the image is a block-level element to fit the container */
+  }
+  
+  
+
+  .landing-contact-container {
+    max-width: 600px; /* Adjust width as needed */
+    margin-right: auto; /* Aligns the container to the right */
+    margin-left: 0; /* Keeps the container to the left */
+    padding: 0rem;
+  }
+  
+  .landing-contact-form input,
+  .landing-contact-form textarea,
+  .landing-contact-form input[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .landing-contact-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .landing-contact-form input[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Responsive styles if needed */
+  @media (max-width: 768px) {
+    .landing-contact-container {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  
+  /* General Section Styling */
+.tabcontent {
+    border-top: 2px solid #e4e4e4; /* Light grey border at the top of each section */
+    padding: 50px 0; /* More vertical padding for breathing space */
+    margin: 20px 0; /* Space between sections */
+  }
+  
+ /* Landing Header Styling */
+.landing-header {
+    position: relative; /* Ensure the pseudo-element is positioned in relation to this */
+    color: #ffffff; /* White text color for better contrast */
+    padding: 200px 10px; /* More padding for a spacious header */
+    overflow: hidden; /* Prevents the pseudo-element from causing scrollbars */
+  }
+  
+  .landing-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('/assets/optuna_dashboard.png') no-repeat center center/cover; /* Path to your image */
+    filter: blur(4px); /* Adjust the px value to increase/decrease the amount of blur */
+    z-index: -1; /* Ensure the image stays behind the content */
+  }
+  
+  /* Ensure the content within .landing-header is positioned above the pseudo-element */
+ /* Landing Header Text Styling */
+.landing-header h1 {
+    font-size: 3rem; /* Example size for the main heading */
+    margin-bottom: 0.5rem; /* Adds some space below the heading */
+  }
+  
+  .landing-header p {
+    font-size: 1.5rem; /* Example size for the paragraph */
+  }
+  
+  /* Landing Header Button Styling */
+  .landing-header button {
+    font-size: 1.25rem; /* Example size for button text */
+    padding: 10px 20px; /* More padding for a larger button appearance */
+    margin-top: 1rem; /* Adds some space above the button */
+    cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+.landing-header button:hover,
+.landing-header button:focus { /* Styles for hover and focus states */
+  background-color: #555; /* Darkens the button on hover */
+  outline: none; /* Removes the outline on focus for a clean look */
+}
+.landing-header button:hover {
+    transform: translateY(-2px); /* Moves the button up slightly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  }
+  
+  /* You may also want to adjust the line-height for better readability */
+  .landing-header h1,
+  .landing-header p {
+    line-height: 1.2;
+  }
+  
+  /* Adjust media query for responsive text sizes if needed */
+  @media (max-width: 768px) {
+    .landing-header h1 {
+      font-size: 2.5rem; /* Smaller size for mobile */
+    }
+  
+    .landing-header p {
+      font-size: 1.25rem; /* Smaller size for mobile */
+    }
+  
+    .landing-header button {
+      font-size: 1rem; /* Smaller size for mobile */
+    }
+  }
+  
+  
+  
+  /* Benefit Section Styling */
+  .landing-benefits .benefit {
+    margin-bottom: 30px; /* Space between benefit items */
+  }
+  
+  .benefit img {
+    height: 64px; /* Fixed height for icons */
+    width: auto; /* Auto width to maintain aspect ratio */
+    margin-bottom: 10px; /* Space between icon and text */
+  }
+  
+  /* Testimonial Section Styling */
+  .landing-social-proof {
+    background-color: #e4d6be; /* Light background for testimonials */
+    padding: 40px 20px; /* Padding around the testimonials */
+  }
+  
+  .testimonial {
+    max-width: 600px; /* Max width for testimonials */
+    margin: auto; /* Centering testimonials */
+    padding: 20px; /* Padding inside each testimonial */
+    box-shadow: 0 2px 5px rgba(147, 140, 140, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* FAQ Section Styling */
+  .landing-faq {
+    background-color: #e4d6be; /* White background for clean look */
+    padding: 20px 20px; /* Padding around FAQ section */
+  }
+  
+  details {
+    margin-bottom: 15px; /* Space between FAQ items */
+  }
+  
+  summary {
+    font-weight: bold; /* Bold font for FAQ questions */
+  }
+  
+  .landing-cta {
+    margin-bottom: 50px; /* Adjust the value as needed */
+}
