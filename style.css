@@ -249,7 +249,6 @@ nav a.active {
     display: block; /* Make sure the image is a block-level element to fit the container */
   }
   
-  
 
   .landing-contact-container {
     max-width: 600px; /* Adjust width as needed */
@@ -412,7 +411,7 @@ nav a.active {
 }
 
 .section-divider {
-    background: linear-gradient(to left, #f0f0f0, #ebc78e);
+    background: linear-gradient(to left, #eacc9d, #e9a941);
     height: 2px;
     width: 100%;
     margin: 50px 0;
