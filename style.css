@@ -1,10 +1,17 @@
+/* Use Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Modern-looking font */
     margin: 0;
     padding: 0;
-    background-color: #E4DCCF; /* #zircon sand */
+    background-color: var(--background-color);
     color: #333;
   }
+  /* Round corners for all input fields, buttons, and images */
+input, textarea, button, img {
+    border-radius: 6px; /* Adjust the px for more or less rounding */
+}
   header {
     background-color: #222;
     color: #fff;
@@ -12,6 +19,8 @@ body {
     text-align: center;
   }
   header h1 {
+    font-family: 'Montserrat', sans-serif; /* Bold, modern-looking font for headers */
+
     margin: 0;
   }
   .container {
@@ -68,6 +77,7 @@ body {
       background-color: #ddd;
       color: black;
     }
+    
     .iframe-container {
       position: relative;
       overflow: hidden;
@@ -82,7 +92,12 @@ body {
       border: none;
     }
 
-/* Add this to your style.css file */
+/* Consistent color scheme example */
+:root {
+    --primary-color: #F08080; /* Your primary brand color */
+    --hover-color: #C06070; /* A darker variant for hover states */
+    --background-color: #E4DCCF; /* A light background color */
+}
 
 nav {
     position: fixed;
@@ -149,9 +164,11 @@ nav a.active {
   
   /* Style for the summary element on hover */
   .faq-item summary:hover {
+    background-color: #f0e1c2; /* Change the background color on hover */
     color: #000; /* Darker text to indicate interactivity */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
   }
-  
+
   /* Reset the list marker style */
   .faq-item details {
     list-style: none;
@@ -164,6 +181,8 @@ nav a.active {
   /* Optional: Style the 'open' state to give some feedback */
   .faq-item[open] summary {
     color: #C06070; /* Example: Change color when the item is open */
+    background-color: #f0e1c2; 
+
   }
   
 
@@ -172,6 +191,7 @@ nav a.active {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+    
   }
   
   .contact-form {
@@ -199,27 +219,31 @@ nav a.active {
     border-color: #555;
   }
   
-  /* If you have a separate class for the submit button, e.g., .cta-button, you would adjust that class instead. */
-  .cta-button {
-    width: 100%; /* This will make the button extend full width of its container */
-    padding: 1rem;
-    font-size: 1.2rem; /* Increased font size for the button as well */
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    .cta-button {
+    width: 100%;
+    font-size: 1.25rem; /* Adjusted font size for readability */
+    padding: 15px 30px; /* Increased padding for a larger button */
+    margin-top: 1rem; /* Space above the button */
+    cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    background-color: #F08080; 
+    border: none; /* No border */
+    color: white; /* White text */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern-looking font */
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 0.05em; /* Adds spacing between letters */
+    
   }
   
-  .cta-button:hover {
-    background-color: #555;
+  .cta-button:hover,
+  .cta-button:focus { /* Styles for hover and focus states */
+    background-color: #C06070; /* A darker shade of blue for hover */
+    outline: none; /* Removes the outline on focus for a clean look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover for depth */
   }
-  
-  
-  .cta-button:hover {
-    background-color: #555;
-  }
+
+
   
   @media (max-width: 768px) {
     .contact-container {
@@ -270,15 +294,28 @@ nav a.active {
   }
   
   .landing-contact-form input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 1.25rem; /* Adjusted font size for readability */
+    padding: 15px 30px; /* Increased padding for a larger button */
+    margin-top: 1rem; /* Space above the button */
+    cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    background-color: #F08080; 
+    border: none; /* No border */
+    color: white; /* White text */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern-looking font */
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 0.05em; /* Adds spacing between letters */
   }
   
   .landing-contact-form input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #C06070; /* A darker shade of blue for hover */
+  }
+  .landing-contact-form input[type="submit"]:focus {
+    background-color: #C06070; /* A darker shade of blue for hover */
+    outline: none; /* Removes the outline on focus for a clean look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover for depth */
   }
   
   /* Responsive styles if needed */
@@ -301,6 +338,7 @@ nav a.active {
     color: #ffffff; /* White text color for better contrast */
     padding: 200px 10px; /* More padding for a spacious header */
     overflow: hidden; /* Prevents the pseudo-element from causing scrollbars */
+    
   }
   
   .landing-header::before {
@@ -326,23 +364,31 @@ nav a.active {
     font-size: 1.5rem; /* Example size for the paragraph */
   }
   
-  /* Landing Header Button Styling */
-  .landing-header button {
-    font-size: 1.25rem; /* Example size for button text */
-    padding: 10px 20px; /* More padding for a larger button appearance */
-    margin-top: 1rem; /* Adds some space above the button */
+/* Landing Header Button Styling */
+.landing-header button {
+    font-size: 1.25rem; /* Adjusted font size for readability */
+    padding: 15px 30px; /* Increased padding for a larger button */
+    margin-top: 1rem; /* Space above the button */
     cursor: pointer; /* Changes cursor to pointer when hovering over the button */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
+    background-color: #F08080; 
+    border: none; /* No border */
+    color: white; /* White text */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern-looking font */
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 0.05em; /* Adds spacing between letters */
   }
   
-.landing-header button:hover,
-.landing-header button:focus { /* Styles for hover and focus states */
-  background-color: #555; /* Darkens the button on hover */
-  outline: none; /* Removes the outline on focus for a clean look */
-}
-.landing-header button:hover {
-    transform: translateY(-2px); /* Moves the button up slightly */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  .landing-header button:hover,
+  .landing-header button:focus { /* Styles for hover and focus states */
+    background-color: #C06070; /* A darker shade of blue for hover */
+    outline: none; /* Removes the outline on focus for a clean look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover for depth */
+  }
+  
+  .landing-header button:hover {
+    transform: translateY(-1px); /* Moves the button up slightly more */
   }
   
   /* You may also want to adjust the line-height for better readability */
@@ -364,9 +410,7 @@ nav a.active {
     .landing-header button {
       font-size: 1rem; /* Smaller size for mobile */
     }
-  }
-  
-  
+  }  
   
   /* Benefit Section Styling */
   .landing-benefits .benefit {
@@ -383,19 +427,28 @@ nav a.active {
   .landing-social-proof {
     background-color: #e4d6be; /* Light background for testimonials */
     padding: 40px 20px; /* Padding around the testimonials */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow around elements */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
+
   }
   
   .testimonial {
     max-width: 600px; /* Max width for testimonials */
     margin: auto; /* Centering testimonials */
     padding: 20px; /* Padding inside each testimonial */
-    box-shadow: 0 2px 5px rgba(147, 140, 140, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow around elements */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
   }
   
   /* FAQ Section Styling */
   .landing-faq {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow around elements */
     background-color: #e4d6be; /* White background for clean look */
     padding: 20px 20px; /* Padding around FAQ section */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
   }
   
   details {
@@ -408,6 +461,7 @@ nav a.active {
   
   .landing-cta {
     margin-bottom: 50px; /* Adjust the value as needed */
+    
 }
 
 .section-divider {
@@ -415,5 +469,65 @@ nav a.active {
     height: 2px;
     width: 100%;
     margin: 50px 0;
+    
   }
-  
+
+  .offerings {
+    padding: 40px 20px; /* Padding around the testimonials */
+  }
+  .offerings:hover {
+    background-color: #e4d6be; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
+}
+  .offerings ul li {
+    list-style-type: disc;
+    padding-top: 5px; /* Adjust this value as needed for spacing */
+    padding-bottom: 5px; /* Adjust this value as needed for spacing */
+    list-style-position: outside;
+}
+
+.offerings ul li:hover {
+    background-color: #f0e1c2; /* Change the background color on hover */
+    color: #333; /* Change the text color on hover */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+  /* Add a global box-shadow setting for card-like elements */
+.card-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow around elements */
+}
+
+.project:hover {
+    background-color: #e4d6be; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
+}
+
+.project {
+    padding: 20px; /* Add padding for spacing */
+}
+
+.benefit {
+    padding: 20px; /* Add padding for spacing */
+}
+.benefit:hover {
+    background-color: #e4d6be; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
+}
+
+#services {
+    max-width: 80%; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center-align the content within the available space */
+    padding: 0 20px; /* Add proportional padding on the left and right */
+}
+
+#about {
+    max-width: 80%; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center-align the content within the available space */
+    padding: 0 20px; /* Add proportional padding on the left and right */
+}
