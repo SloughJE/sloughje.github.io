@@ -1,33 +1,43 @@
 /* Use Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap');
 
+/* Consistent color scheme example */
+:root {
+    --primary-color: #F08080; /* Your primary brand color */
+    --hover-color: #C06070; /* A darker variant for hover states */
+    --background-color: #E4DCCF; /* A light background color */
+}
+
 body {
-    font-family: 'Open Sans', sans-serif; /* Modern-looking font */
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 80px; /* Add top padding to account for fixed navbar height */
     background-color: var(--background-color);
     color: #333;
-  }
-  /* Round corners for all input fields, buttons, and images */
-input, textarea, button, img {
-    border-radius: 6px; /* Adjust the px for more or less rounding */
 }
-  header {
+
+input, textarea, button, img {
+    border-radius: 6px;
+}
+
+header {
     background-color: #222;
     color: #fff;
     padding: 2rem 0;
     text-align: center;
-  }
-  header h1 {
-    font-family: 'Montserrat', sans-serif; /* Bold, modern-looking font for headers */
+}
 
+header h1 {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-  }
-  .container {
+}
+
+.container {
     width: 80%;
     margin: auto;
     overflow: hidden;
-  }
+}
+
   .about, .portfolio, .contact {
     padding: 4rem 0;
     text-align: center;
@@ -51,6 +61,7 @@ input, textarea, button, img {
   .contact input[type=submit]:hover {
     opacity: 0.9;
   }
+
   footer {
     background-color: #222;
     color: #fff;
@@ -61,29 +72,68 @@ input, textarea, button, img {
     width: 100%;
   }
 
-  nav {
-      background-color: #333;
-      overflow: hidden;
-    }
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
+  
+/* Navigation bar */
+nav {
+    background-color: #333;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Stays on top */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center; /* Center items vertically */
+    padding: 20px 20px; /* Add some horizontal padding */
+    line-height: 40px; /* Adjust this line height to match the nav's height */
+    height: 30px; /* Or whatever your fixed nav height is */
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7em; /* Make the brand name larger */
+    display: inline; /* Adjust as needed for your layout */
+    letter-spacing: 1px; /* Adds 2px spacing between letters */
+    padding: 0 20px; /* Optional: adds padding on the left and right */
+
+}
+
+.nav-links{
+    padding: 0 20px;
+    font-size: 1.25em;
+}
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
     
-    .iframe-container {
+/* Navigation Bar Active Link */
+nav a.active {
+    background-color: #F08080; /* Coral Pink for active links */
+    color: white; /* White text color for active links */
+    border-bottom: 3px solid #C06070; /* Darker shade for the bottom border */
+  }
+
+    
+  /* For hovered links (optional, for better UX) */
+  nav a:hover {
+    background-color: #C06070; /* Darker pink for hover state */
+    color: white;
+    border-bottom: 3px solid #F08080; /* Darker shade for the bottom border */
+
+  }
+
+
+.iframe-container {
       position: relative;
       overflow: hidden;
       padding-top: 56.25%; /* 16:9 Aspect Ratio */
     }
-    .iframe-container iframe {
+.iframe-container iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -92,24 +142,9 @@ input, textarea, button, img {
       border: none;
     }
 
-/* Consistent color scheme example */
-:root {
-    --primary-color: #F08080; /* Your primary brand color */
-    --hover-color: #C06070; /* A darker variant for hover states */
-    --background-color: #E4DCCF; /* A light background color */
-}
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure the navbar stays on top of other elements */
-  }
   
-  /* Add padding-top to the body to ensure the content is not hidden behind the fixed navbar */
-  body {
-    padding-top: 40px; /* Adjust this value to match the height of your navbar */
-  }
+
   
 /* This will apply to the container of each project */
 .project {
@@ -124,6 +159,7 @@ nav {
     justify-content: start;
     gap: 20px; /* Space between the two images */
     margin-bottom: 10px; /* Space between the image container and the project description */
+    padding-right: 20px; /* Add padding to the right to create space */
   }
   
   /* This will apply to each image within the image container */
@@ -133,26 +169,6 @@ nav {
     object-fit: contain; /* This ensures the image is fully contained within the element's box, potentially leaving some space empty */
   }
   
-  
-  /* Add a class for the flowchart if you need specific styles, otherwise, it'll be treated like any other thumbnail */
-  /*.project-thumbnail.flowchart {
-    /* Styles if needed, otherwise this can be omitted if the flowchart has no special styling requirements */
-  /*}
-  
-/* Navigation Bar Active Link */
-nav a.active {
-    background-color: #F08080; /* Coral Pink for active links */
-    color: white; /* White text color for active links */
-    /*border-bottom: 3px solid #C06070; /* Darker shade for the bottom border */
-  }
-  
-  /* For hovered links (optional, for better UX) */
-  nav a:hover {
-    background-color: #C06070; /* Darker pink for hover state */
-    color: white;
-    /*border-bottom: 3px solid #F08080; /* Darker shade for the bottom border */
-
-  }
   
 /* FAQ Section */
 /* Style for the summary element */
@@ -474,9 +490,11 @@ nav a.active {
 
   .offerings {
     padding: 40px 20px; /* Padding around the testimonials */
+    background-color: #e4d6be; /* Change background color on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
   }
   .offerings:hover {
-    background-color: #e4d6be; /* Change background color on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
     border-radius: 10px; /* Add rounded corners with a specified radius */
 
@@ -530,4 +548,17 @@ nav a.active {
     max-width: 80%; /* Adjust the maximum width as needed */
     margin: 0 auto; /* Center-align the content within the available space */
     padding: 0 20px; /* Add proportional padding on the left and right */
+}
+
+.portfolio-head {
+    max-width: 100%; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center-align the content within the available space */
+    padding: 0 20px; /* Add proportional padding on the left and right */
+}
+
+.text-container {
+    max-width: 90%; /* Adjust the maximum width as needed */
+    margin: 0 left; /* Center-align the text content */
+    padding: 0 20px; /* Add proportional padding on the left and right */
+
 }

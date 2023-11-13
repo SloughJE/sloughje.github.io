@@ -8,20 +8,20 @@
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="javascript:void(0);" onclick="openTab('landing')">Home</a>
-    <a href="javascript:void(0);" onclick="openTab('about')">About</a>
-    <a href="javascript:void(0);" onclick="openTab('services')">Services</a>
-    <a href="javascript:void(0);" onclick="openTab('portfolio')">Portfolio</a>
-    <a href="javascript:void(0);" onclick="openTab('contact_page')">Contact</a>
+  <!-- Sticky Navigation Bar -->
+  <nav class="nav">
+    <div class="navbar-brand">JS Data Science Consulting</div>
+    <div class="nav-links">
+      <a href="javascript:void(0);" onclick="openTab('landing')">Home</a>
+      <a href="javascript:void(0);" onclick="openTab('about')">About</a>
+      <a href="javascript:void(0);" onclick="openTab('services')">Services</a>
+      <a href="javascript:void(0);" onclick="openTab('portfolio')">Portfolio</a>
+      <a href="javascript:void(0);" onclick="openTab('contact_page')">Contact</a>
+    </div>
   </nav>
   
 
-  <header>
-    <h1>JS DS Consulting</h1>
-    <p>Analyze Understand Simplify Implement</p>
-  </header>
+
 
 
   <div class="container">
@@ -29,8 +29,9 @@
     <!-- Landing Section -->
     <section id="landing" class="tabcontent" style="display: block;">
         <div class="landing-header">
-        <h1>Transform Data into Decisions</h1>
-        <p>Unleash the potential of your data with actionable insights and strategic intelligence.</p>
+        <h1>JS Data Science Consulting</h1>
+        <h2>Model → Visualize → Collaborate</h2>
+        <p>Raw Data to Collaborative Solutions for Decisive Impact.</p>
         <button onclick="location.href='#contact';">Book My Free Consultation</button>
         </div>
         <div class="section-divider"></div>
@@ -172,6 +173,8 @@
     <section id="services" class="tabcontent">
         <h2>Professional Data Science Services</h2>
         <p>I deliver end-to-end data science services, guiding projects from initial data wrangling to deploying robust applications. My expertise lies in transforming complex datasets into actionable insights and practical tools, and communicating results effectively.</p>
+        <p>Analyze Understand Simplify Implement</p>
+
         <div class="offerings">
 
         <h2>Core Offerings</h2>
@@ -195,64 +198,84 @@
       
     <!-- Portfolio Section -->
     <section id="portfolio" class="tabcontent">
+        <div class="portfolio-head">
         <h2>Portfolio</h2>
         <p>My portfolio showcases a selection of projects that demonstrate my expertise in data science, from innovative machine learning applications to interactive data visualization tools. Here's a glimpse into the work I've done:</p>
+        </div>
         <div class="section-divider"></div>
         <div class="project">
-            <h3>Aerial Straps Pose Classifier</h3>
+            <div class="text-container">
+                <h3>Aerial Straps Pose Classifier</h3>
+            </div>
             <div class="image-container">
               <img src="assets/straps_monarca_back_lever.jpg" alt="Aerial Straps Pose Classifier Thumbnail" class="project-thumbnail">
               <img src="assets/straps_flow_chart.png" alt="Flowchart Diagram" class="project-thumbnail flowchart">
             </div>
+            <div class="text-container">
             <p>An application leveraging computer vision and machine learning to classify aerial straps poses. This project illustrates an ML project from conception to deployment. It features OpenCV, MediaPipe, Optuna, MLflow, fastAPI, Docker, and GCR. It's deployed with a user-friendly web app for real-time predictions.</p>
             <ul>
               <li><a href="https://aerial-straps-classifier-n3pdpbqp5a-ue.a.run.app/" target="_blank">Live App deployed on Google Cloud Run</a></li>
               <li><a href="https://github.com/SloughJE/aerial_straps_classifier" target="_blank">GitHub Repository</a></li>
             </ul>
+            </div>
           </div>
           
         <div class="section-divider"></div>
         <div class="project">
+            <div class="text-container">
             <h3>Interactive Resume with Plotly Dash</h3>
+            </div>
             <div class="image-container">
               <img src="assets/resume_map.png" alt="Interactive Resume Locations Screenshot" class="project-thumbnail">
               <img src="assets/resume_timeline.png" alt="Interactive Resume Experience Screenshot" class="project-thumbnail">
             </div>
-            <p>An interactive resume created using Plotly Dash to dynamically present professional experience and skills through engaging visualizations.</p>
-            <ul>
-              <li><a href="https://slough.herokuapp.com/" target="_blank">Live App deployed on Heroku</a></li>
-              <li><a href="https://github.com/SloughJE/Resume" target="_blank">GitHub Repository</a></li>
-            </ul>
+            <div class="text-container">
+                <p>An interactive resume created using Plotly Dash to dynamically present professional experience and skills through engaging visualizations.</p>
+                <ul>
+                    <li><a href="https://slough.herokuapp.com/" target="_blank">Live App deployed on Heroku</a></li>
+                    <li><a href="https://github.com/SloughJE/Resume" target="_blank">GitHub Repository</a></li>
+                </ul>
+            </div>
         </div>
           
         <div class="section-divider"></div>
         <div class="project">
-            <h3>Podcast Newsletter Processing and Summary Tool</h3>
+            <div class="text-container">
+                <h3>Podcast Newsletter Processing and Summary Tool</h3>
+            </div>
             <div class="image-container">
               <img src="assets/podcast_summary.png" alt="Podcast Summary Screenshot" class="project-thumbnail">
             </div>
+            <div class="text-container">
             <p>A tool that automates the processing of podcast episodes, transcribing them, and generating summaries and highlight images, showcased through a Streamlit app.</p>
+        
             <ul>
               <li><a href="https://podcastsummary-jslough.streamlit.app/" target="_blank">Demo App deployed on Streamlit</a></li>
               <li><a href="https://github.com/SloughJE/podcast_summary" target="_blank">GitHub Repository</a></li>
             </ul>
+            </div>
         </div>
           
         <div class="section-divider"></div>
         <div class="project">
-            <h3>NASA ATD-2 Machine Learning for Predicting Aircraft Landing Times</h3>
+            <div class="text-container">
+                <h3>NASA ATD-2 Machine Learning for Predicting Aircraft Landing Times</h3>
+            </div>
             <div class="image-container">
               <img src="assets/nasa_error_dist.png" alt="NASA Error Distribution Visualization" class="project-thumbnail">
               <img src="assets/nasa_waterfall.png" alt="NASA Waterfall Chart" class="project-thumbnail">
             </div>
+            <div class="text-container">
             <p>This project involved developing a machine learning model to improve the accuracy of predicting aircraft landing times, integrating the model with real-time operational data for air traffic management.</p>
             <ul>
               <li><a href="https://aviationsystems.arc.nasa.gov/publications/2021/20210017594_Wesely_Aviation2021_paper.pdf" target="_blank">Research Paper</a></li>
             </ul>
+            </div>
         </div>
         <div class="section-divider"></div>  
-        
-        <p>These projects highlight my versatility in data science, from analytical research to full-stack development, all with a singular goal: turning data into decisive action.</p>
+        <div class="text-container">
+            <p>These projects highlight my versatility in data science, from analytical research to full-stack development, all with a singular goal: turning data into decisive action.</p>
+        </div>
     </section>
       
 
