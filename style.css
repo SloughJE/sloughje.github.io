@@ -558,6 +558,12 @@ nav a.active {
     position: relative;
 }
 
+.about-text:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
+}
+
 .professional-photo {
     float: inline-start; /* Make the image float to the left */
     margin-right: 20px; /* Add space between the image and the text */
@@ -565,11 +571,6 @@ nav a.active {
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Apply border-radius directly to the image */
 }
-
-
-
-
-
 
 .portfolio-head {
     max-width: 100%; /* Adjust the maximum width as needed */
