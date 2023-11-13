@@ -635,7 +635,7 @@ nav a {
         display: block; /* Show the hamburger icon on mobile */
         position: absolute;
         top: 15px; /* Adjust as needed */
-        right: 15px; /* Adjust as needed */
+        right: 25px; /* Adjust as needed */
         z-index: 2000; /* Ensure it's above other content */
     }
 
