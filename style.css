@@ -615,41 +615,49 @@ nav a {
 
 /* Media query for mobile screens */
 @media (max-width: 768px) {
-    /* Hamburger menu - shown on mobile */
+    body {
+        padding-top: 60px; /* Reduced padding to account for a smaller nav bar height */
+    }
+
+    nav {
+        flex-direction: column; /* Stack the brand and the links vertically */
+        padding: 10px; /* Reduced padding */
+        align-items: flex-start; /* Align items to the start of the nav bar */
+    }
+
+    .navbar-brand {
+        margin-left: 10px; /* Align brand to the left */
+        font-size: 1.2em; /* Smaller font size for the brand name */
+        padding: 0; /* Remove padding */
+    }
+
     .hamburger {
         display: block; /* Show the hamburger icon on mobile */
         position: absolute;
-        top: 20px; /* Adjust as needed */
-        right: 20px; /* Adjust as needed */
+        top: 15px; /* Adjust as needed */
+        right: 15px; /* Adjust as needed */
+        z-index: 2000; /* Ensure it's above other content */
     }
 
-    /* Navbar brand adjustments for mobile */
-    .navbar-brand {
-        width: 100%; /* Full width */
-        padding: 10px 20px; /* Adjust padding */
-        text-align: left; /* Align brand text to the left */
-    }
-
-    /* Nav links - hidden on mobile until the hamburger is tapped */
+    /* Initially hide the navigation links on mobile */
     .nav-links {
-        display: none; /* Hide the links by default on mobile */
-        flex-direction: column; /* Stack the links vertically */
+        display: none;
+        flex-direction: column; /* Align links vertically */
         width: 100%; /* Full width */
-        padding-left: 0; /* Remove left padding */
+        padding-top: 10px; /* Space below the brand name */
     }
 
-    /* Show nav-links when they have the 'open' class */
+    /* Show navigation links when 'open' class is added */
     .nav-links.open {
-        display: flex; /* Use flexbox for layout */
+        display: flex; /* Display the flex container */
     }
 
     /* Style adjustments for individual nav links on mobile */
     nav a {
-        float: none; /* Disable floating for links */
-        display: block; /* Full-width clickable area */
         text-align: left; /* Align text to the left */
         padding: 10px 20px; /* Larger clickable area */
         border-top: 1px solid #444; /* Add a border between the links */
+        width: 100%; /* Full width for each link */
     }
 
     /* Ensure the active state doesn't apply a background to the brand */

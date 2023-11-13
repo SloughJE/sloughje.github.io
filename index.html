@@ -11,23 +11,19 @@
 <!-- Sticky Navigation Bar -->
 <nav class="nav">
     <div class="navbar-brand">
-      <a href="javascript:void(0);" onclick="openTab('landing')">JS Data Science Consulting</a>
+      <a href="javascript:void(0);" onclick="openTab('landing', this);">JS Data Science Consulting</a>
     </div>
     <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
     <div class="nav-links">
-      <a href="javascript:void(0);" onclick="openTab('landing')">Home</a>
-      <a href="javascript:void(0);" onclick="openTab('about')">About</a>
-      <a href="javascript:void(0);" onclick="openTab('services')">Services</a>
-      <a href="javascript:void(0);" onclick="openTab('portfolio')">Portfolio</a>
-      <a href="javascript:void(0);" onclick="openTab('contact_page')">Contact</a>
+      <a href="javascript:void(0);" onclick="openTab('landing', this);">Home</a>
+      <a href="javascript:void(0);" onclick="openTab('about', this);">About</a>
+      <a href="javascript:void(0);" onclick="openTab('services', this);">Services</a>
+      <a href="javascript:void(0);" onclick="openTab('portfolio', this);">Portfolio</a>
+      <a href="javascript:void(0);" onclick="openTab('contact_page', this);">Contact</a>
     </div>
 </nav>
   
   
-
-
-
-
   <div class="container"> <!-- Container Around Everything -->
 
     <!-- Landing Section -->
@@ -317,38 +313,53 @@
     <p>© 2023 by JS DS Consulting</p>
   </footer>
   
-  <script>
-    function openTab(tabName) {
+    <script>
+    function openTab(tabName, element) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
-    tablinks = document.querySelectorAll("nav a");
+    tablinks = document.querySelectorAll(".nav-links a");
+
+    // Hide all tab contents
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
+
+    // Remove "active" class from all tab links
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].classList.remove("active");
     }
+
+    // Display the clicked tab's content and add "active" class to the clicked tab link
     document.getElementById(tabName).style.display = "block";
-    event.currentTarget.className += " active";
+    if (element) {
+        element.classList.add("active");
     }
+
+    // Close the hamburger menu by removing 'open' class from nav-links
+    var links = document.querySelector('.nav-links');
+    links.classList.remove('open');
+    }
+
     // Set landing as the default tab and active state
     document.addEventListener("DOMContentLoaded", function() {
-    openTab('landing');
-    document.querySelector("nav a").className += " active"; // Assuming 'Home' is the first link
+    var defaultTab = 'landing';
+    openTab(defaultTab);
+    document.querySelector(".nav-links a[href='javascript:void(0);'][onclick*='" + defaultTab + "']").classList.add("active");
     });
 
-  </script>
-  <script>
-  // JavaScript function to toggle the menu
-  function toggleMenu() {
-        var links = document.querySelector('.nav-links');
-        if (links.classList.contains('open')) {
-            links.classList.remove('open');
-        } else {
-            links.classList.add('open');
-        }
-    }
 
+  </script>
+
+<script>
+  // JavaScript function to toggle the menu
+    function toggleMenu() {
+    var links = document.querySelector('.nav-links');
+    // Toggle the 'open' class on the '.nav-links'
+    links.classList.toggle('open');
+        }
 </script>
+
+
+
 </body>
 </html>
