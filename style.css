@@ -95,7 +95,6 @@ nav {
     display: inline; /* Adjust as needed for your layout */
     letter-spacing: 1px; /* Adds 2px spacing between letters */
     padding: 0 20px; /* Optional: adds padding on the left and right */
-
 }
 
 .nav-links{
@@ -110,22 +109,33 @@ nav a {
     padding: 14px 16px;
     text-decoration: none;
 }
-    
-/* Navigation Bar Active Link */
-nav a.active {
+
+.navbar-brand a {
+    color: white;
+    text-decoration: none; /* Removes underline from links */
+    /* Remove any padding if you don't want the clickable area to be too large */
+}
+
+/* Make sure the brand link doesn't get the active styling */
+.navbar-brand a.active, .navbar-brand a:hover {
+    background-color: transparent; /* Ensures no background color */
+    color: white; /* Keeps the text color white */
+    border-bottom: none; /* No border */
+}
+
+/* Navigation Bar Active Link for nav-links only */
+.nav-links a.active {
     background-color: #F08080; /* Coral Pink for active links */
     color: white; /* White text color for active links */
     border-bottom: 3px solid #C06070; /* Darker shade for the bottom border */
-  }
+}
 
-    
-  /* For hovered links (optional, for better UX) */
-  nav a:hover {
+/* For hovered links in nav-links only (optional, for better UX) */
+.nav-links a:hover {
     background-color: #C06070; /* Darker pink for hover state */
     color: white;
     border-bottom: 3px solid #F08080; /* Darker shade for the bottom border */
-
-  }
+}
 
 
 .iframe-container {
