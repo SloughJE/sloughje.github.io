@@ -413,21 +413,6 @@ nav a.active {
     line-height: 1.2;
   }
   
-  /* Adjust media query for responsive text sizes if needed */
-  @media (max-width: 768px) {
-    .landing-header h1 {
-      font-size: 2.5rem; /* Smaller size for mobile */
-    }
-  
-    .landing-header p {
-      font-size: 1.25rem; /* Smaller size for mobile */
-    }
-  
-    .landing-header button {
-      font-size: 1rem; /* Smaller size for mobile */
-    }
-  }  
-  
   /* Benefit Section Styling */
   .landing-benefits .benefit {
     margin-bottom: 30px; /* Space between benefit items */
@@ -489,7 +474,7 @@ nav a.active {
   }
 
   .offerings {
-    padding: 40px 20px; /* Padding around the testimonials */
+    padding: 10px 20px; /* Padding around the testimonials */
     background-color: #e4d6be; /* Change background color on hover */
     border-radius: 10px; /* Add rounded corners with a specified radius */
 
@@ -511,6 +496,8 @@ nav a.active {
     color: #333; /* Change the text color on hover */
     transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
 }
+
+
 
   /* Add a global box-shadow setting for card-like elements */
 .card-shadow {
@@ -550,6 +537,40 @@ nav a.active {
     padding: 0 20px; /* Add proportional padding on the left and right */
 }
 
+.about-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex; /* Use flexbox to align items side by side */
+    flex-wrap: wrap; /* Allow items to wrap if not enough space */
+    align-items: center; /* Center-align the items vertically */
+    justify-content: space-around; /* Space out the content and image */
+    text-align: left; /* Default text alignment to left for the content */
+}
+
+.about-text {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 10px;
+    background-color: #e4d6be;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.professional-photo {
+    float: inline-start; /* Make the image float to the left */
+    margin-right: 20px; /* Add space between the image and the text */
+    width: 200px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Apply border-radius directly to the image */
+}
+
+
+
+
+
+
 .portfolio-head {
     max-width: 100%; /* Adjust the maximum width as needed */
     margin: 0 auto; /* Center-align the content within the available space */
@@ -562,3 +583,29 @@ nav a.active {
     padding: 0 20px; /* Add proportional padding on the left and right */
 
 }
+
+
+/*
+@media (max-width: 768px) {
+    .professional-photo {
+        float: none; /* Stop floating on small screens 
+        margin: 0 auto; /* Center the image 
+        display: block;
+    }
+}
+
+
+/* Adjust media query for responsive text sizes if needed 
+@media (max-width: 768px) {
+    .landing-header h1 {
+      font-size: 2.5rem; /* Smaller size for mobile 
+    }
+  
+    .landing-header p {
+      font-size: 1.25rem; /* Smaller size for mobile 
+    }
+  
+    .landing-header button {
+      font-size: 1rem; /* Smaller size for mobile 
+    }
+  }  */
