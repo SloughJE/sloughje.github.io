@@ -598,6 +598,40 @@ nav a {
 
 }
 
+/* Use a media query to target screens with a max width of 768px, which usually covers tablets and mobile phones */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack the brand and the links vertically */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        height: auto; /* Let the height be determined by its content */
+        text-align: center; /* Center-align the content */
+    }
+
+    .navbar-brand,
+    .nav-links {
+        width: 100%; /* Take the full width of the nav */
+        padding: 10px 0; /* Add some vertical padding */
+    }
+
+    .nav-links {
+        display: flex; /* Continue using flexbox */
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center; /* Align the links to the center horizontally */
+    }
+
+    nav a {
+        float: none; /* Disable floating for links */
+        padding: 10px; /* Add padding to increase the clickable area */
+        width: auto; /* Let each link take only as much width as needed */
+        text-align: center; /* Ensure text is centered within each link */
+    }
+
+    /* This ensures the active state doesn't apply a background to the brand */
+    .navbar-brand a.active {
+        background-color: transparent;
+    }
+}
+
 
 /*
 @media (max-width: 768px) {
