@@ -341,13 +341,14 @@
   <script>
   // JavaScript function to toggle the menu
   function toggleMenu() {
-    var links = document.querySelector('.nav-links');
-    if (links.style.maxHeight) {
-      links.style.maxHeight = null;
-    } else {
-      links.style.maxHeight = '500px'; // This should be enough to show all links
+        var links = document.querySelector('.nav-links');
+        if (links.classList.contains('open')) {
+            links.classList.remove('open');
+        } else {
+            links.classList.add('open');
+        }
     }
-  }
+
 </script>
 </body>
 </html>

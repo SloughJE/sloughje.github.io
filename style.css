@@ -613,57 +613,49 @@ nav a {
     cursor: pointer;
   }
 
-/* Use a media query to target screens with a max width of 768px, which usually covers tablets and mobile phones */
+/* Media query for mobile screens */
 @media (max-width: 768px) {
+    /* Hamburger menu - shown on mobile */
     .hamburger {
-        display: block; /* Show the hamburger icon */
+        display: block; /* Show the hamburger icon on mobile */
         position: absolute;
         top: 20px; /* Adjust as needed */
         right: 20px; /* Adjust as needed */
-      }
-      
-    nav {
-        flex-direction: column; /* Stack the brand and the links vertically */
-        padding: 10px 20px; /* Adjust padding for smaller screens */
-        height: auto; /* Let the height be determined by its content */
-        text-align: center; /* Center-align the content */
     }
 
-    .navbar-brand,
+    /* Navbar brand adjustments for mobile */
+    .navbar-brand {
+        width: 100%; /* Full width */
+        padding: 10px 20px; /* Adjust padding */
+        text-align: left; /* Align brand text to the left */
+    }
+
+    /* Nav links - hidden on mobile until the hamburger is tapped */
     .nav-links {
-        width: 100%; /* Take the full width of the nav */
-        padding: 10px 0; /* Add some vertical padding */
+        display: none; /* Hide the links by default on mobile */
+        flex-direction: column; /* Stack the links vertically */
+        width: 100%; /* Full width */
+        padding-left: 0; /* Remove left padding */
     }
 
-    /* Convert the flex layout to block layout for the nav-links */
-    .nav-links {
-        display: block;
-        width: 100%;
+    /* Show nav-links when they have the 'open' class */
+    .nav-links.open {
+        display: flex; /* Use flexbox for layout */
     }
 
+    /* Style adjustments for individual nav links on mobile */
     nav a {
         float: none; /* Disable floating for links */
-        padding: 10px; /* Add padding to increase the clickable area */
-        width: auto; /* Let each link take only as much width as needed */
-        text-align: center; /* Ensure text is centered within each link */
+        display: block; /* Full-width clickable area */
+        text-align: left; /* Align text to the left */
+        padding: 10px 20px; /* Larger clickable area */
+        border-top: 1px solid #444; /* Add a border between the links */
     }
 
-    /* This ensures the active state doesn't apply a background to the brand */
+    /* Ensure the active state doesn't apply a background to the brand */
     .navbar-brand a.active {
         background-color: transparent;
     }
-    /* Style adjustments for nav links */
-  nav a {
-    display: block;
-    text-align: center;
-    padding: 10px; /* Increase clickable area */
-    border-top: 1px solid #444; /* Add a border between the links */
-  }
-
-  /* This is where the menu is actually toggled */
-  .nav-links.open {
-    max-height: 500px; /* Increase max-height when open */
-  }
 }
 
 
