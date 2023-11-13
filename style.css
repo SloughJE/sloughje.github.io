@@ -33,7 +33,7 @@ header h1 {
 }
 
 .container {
-    width: 80%;
+    width: 85%;
     margin: auto;
     overflow: hidden;
 }
@@ -141,10 +141,6 @@ nav a.active {
       height: 100%;
       border: none;
     }
-
-
-  
-
   
 /* This will apply to the container of each project */
 .project {
@@ -257,20 +253,7 @@ nav a.active {
     background-color: #C06070; /* A darker shade of blue for hover */
     outline: none; /* Removes the outline on focus for a clean look */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover for depth */
-  }
-
-
-  
-  @media (max-width: 768px) {
-    .contact-container {
-      flex-direction: column;
-    }
-  
-    .contact-form, .contact-image {
-      flex-basis: 100%;
-    }
-  }
-  
+  }  
 
   .contact-image {
     flex-basis: 50%;
@@ -350,6 +333,8 @@ nav a.active {
   
  /* Landing Header Styling */
 .landing-header {
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
     position: relative; /* Ensure the pseudo-element is positioned in relation to this */
     color: #ffffff; /* White text color for better contrast */
     padding: 200px 10px; /* More padding for a spacious header */
@@ -396,6 +381,11 @@ nav a.active {
     letter-spacing: 0.05em; /* Adds spacing between letters */
   }
   
+  .landing-header:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+  }
+
   .landing-header button:hover,
   .landing-header button:focus { /* Styles for hover and focus states */
     background-color: #C06070; /* A darker shade of blue for hover */
@@ -445,13 +435,17 @@ nav a.active {
   
   /* FAQ Section Styling */
   .landing-faq {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow around elements */
-    background-color: #e4d6be; /* White background for clean look */
+    margin: 20px; /* Add margin to all sides */
+    background-color: #e4d6be; 
     padding: 20px 20px; /* Padding around FAQ section */
     border-radius: 10px; /* Add rounded corners with a specified radius */
-
   }
   
+  .landing-faq:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+}
+
   details {
     margin-bottom: 15px; /* Space between FAQ items */
   }
@@ -532,30 +526,39 @@ nav a.active {
 }
 
 #about {
-    max-width: 80%; /* Adjust the maximum width as needed */
-    margin: 0 auto; /* Center-align the content within the available space */
-    padding: 0 20px; /* Add proportional padding on the left and right */
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 4rem 0; /* Added more vertical padding */
 }
 
 .about-container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 10px 0;
-    display: flex; /* Use flexbox to align items side by side */
-    flex-wrap: wrap; /* Allow items to wrap if not enough space */
-    align-items: center; /* Center-align the items vertically */
-    justify-content: space-around; /* Space out the content and image */
-    text-align: left; /* Default text alignment to left for the content */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Adds space between flex items */
+    margin-bottom: 2rem; /* Space below the container */
 }
 
 .about-text {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 10px 10px;
+    flex: 1 1 60%; /* Flex grow, flex shrink, flex basis */
+    padding: 20px;
     background-color: #e4d6be;
     border-radius: 10px;
-    text-align: left;
     position: relative;
+}
+
+.about-text p {
+    font-size: 1rem; /* Adjust font size for readability */
+    line-height: 1.6; /* Adjust line height for readability */
+    margin-bottom: 1.5rem; /* Space between paragraphs */
+}
+
+.professional-photo {
+    flex: 1 1 35%; /* Flex grow, flex shrink, flex basis */
+    width: auto; /* Maintains aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .about-text:hover {
@@ -610,3 +613,15 @@ nav a.active {
       font-size: 1rem; /* Smaller size for mobile 
     }
   }  */
+
+/*
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-form, .contact-image {
+      flex-basis: 100%;
+    }
+  }
+  */
