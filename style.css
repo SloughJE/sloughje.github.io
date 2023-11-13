@@ -645,12 +645,23 @@ nav a {
         flex-direction: column; /* Align links vertically */
         width: 100%; /* Full width */
         padding-top: 10px; /* Space below the brand name */
+        transition: transform 0.3s; /* Animate the transform property */
+
     }
 
     /* Show navigation links when 'open' class is added */
     .nav-links.open {
         display: flex; /* Display the flex container */
-    }
+        flex-direction: column; /* Stack the links vertically */
+        transform: translateY(0%); /* Reset any transformation */
+        background-color: #333; /* Same color as the nav bar for consistency */
+        width: 100%; /* Ensure it spans the full width */
+        position: absolute; /* Position it absolutely within the nav */
+        top: 60px; /* Position below the navbar-brand */
+        left: 0;
+        padding-top: 0; /* Adjust or remove padding if not needed */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for better visibility */
+      }
 
     /* Style adjustments for individual nav links on mobile */
     nav a {
@@ -658,6 +669,7 @@ nav a {
         padding: 10px 20px; /* Larger clickable area */
         border-top: 1px solid #444; /* Add a border between the links */
         width: 100%; /* Full width for each link */
+        
     }
 
     /* Ensure the active state doesn't apply a background to the brand */
