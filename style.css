@@ -100,7 +100,12 @@ nav {
 .nav-links{
     padding: 0 20px;
     font-size: 1.25em;
+    transition: max-height 0.3s; /* Smooth transition for the dropdown */
+
 }
+
+
+  
 nav a {
     float: left;
     display: block;
@@ -598,8 +603,25 @@ nav a {
 
 }
 
+/* Hamburger menu */
+.hamburger {
+    display: none; /* Hidden by default, will be shown in media query for mobile */
+    font-size: 24px; /* Size of the hamburger icon */
+    background: none;
+    border: none;
+    color: white; /* Color of the hamburger icon */
+    cursor: pointer;
+  }
+
 /* Use a media query to target screens with a max width of 768px, which usually covers tablets and mobile phones */
 @media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+        position: absolute;
+        top: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+      }
+      
     nav {
         flex-direction: column; /* Stack the brand and the links vertically */
         padding: 10px 20px; /* Adjust padding for smaller screens */
@@ -613,10 +635,10 @@ nav a {
         padding: 10px 0; /* Add some vertical padding */
     }
 
+    /* Convert the flex layout to block layout for the nav-links */
     .nav-links {
-        display: flex; /* Continue using flexbox */
-        flex-direction: column; /* Stack the links vertically */
-        align-items: center; /* Align the links to the center horizontally */
+        display: block;
+        width: 100%;
     }
 
     nav a {
@@ -630,6 +652,18 @@ nav a {
     .navbar-brand a.active {
         background-color: transparent;
     }
+    /* Style adjustments for nav links */
+  nav a {
+    display: block;
+    text-align: center;
+    padding: 10px; /* Increase clickable area */
+    border-top: 1px solid #444; /* Add a border between the links */
+  }
+
+  /* This is where the menu is actually toggled */
+  .nav-links.open {
+    max-height: 500px; /* Increase max-height when open */
+  }
 }
 
 

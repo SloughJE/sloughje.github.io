@@ -11,8 +11,9 @@
 <!-- Sticky Navigation Bar -->
 <nav class="nav">
     <div class="navbar-brand">
-      <a href="javascript:void(0);" onclick="openTab('landing')" class="home-link">JS Data Science Consulting</a>
+      <a href="javascript:void(0);" onclick="openTab('landing')">JS Data Science Consulting</a>
     </div>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
     <div class="nav-links">
       <a href="javascript:void(0);" onclick="openTab('landing')">Home</a>
       <a href="javascript:void(0);" onclick="openTab('about')">About</a>
@@ -20,7 +21,7 @@
       <a href="javascript:void(0);" onclick="openTab('portfolio')">Portfolio</a>
       <a href="javascript:void(0);" onclick="openTab('contact_page')">Contact</a>
     </div>
-  </nav>
+</nav>
   
   
 
@@ -337,7 +338,16 @@
     });
 
   </script>
-  
-
+  <script>
+  // JavaScript function to toggle the menu
+  function toggleMenu() {
+    var links = document.querySelector('.nav-links');
+    if (links.style.maxHeight) {
+      links.style.maxHeight = null;
+    } else {
+      links.style.maxHeight = '500px'; // This should be enough to show all links
+    }
+  }
+</script>
 </body>
 </html>
