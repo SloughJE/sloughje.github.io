@@ -678,6 +678,20 @@ nav a {
     .navbar-brand a.active {
         background-color: transparent;
     }
+    .landing-contact-container {
+        width: 100%; /* Ensures the container fits within the screen size */
+        padding: 0 15px; /* Adjust padding as needed */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
+
+    .landing-contact-form {
+        width: 100%; /* Full width to fit the container */
+    }
+
+    .cta-landing-button {
+        width: 100%; /* Full width to fit the container */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
 }
 
 
