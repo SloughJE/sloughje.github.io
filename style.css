@@ -281,13 +281,7 @@ nav a {
 
   }
   
-  /* Responsive styles if needed */
-  @media (max-width: 768px) {
-    .landing-contact-container {
-      width: 100%;
-      padding: 1rem;
-    }
-  }
+
   
   /* General Section Styling */
 /* General Section Styling */
