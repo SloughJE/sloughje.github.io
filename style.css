@@ -766,11 +766,8 @@ nav a {
       flex-direction: column; /* Stack form and image vertically on mobile */
       align-items: center; /* Center-align the items on mobile */
     }
-    /* Assigns flex values to make the form two-thirds and profile pic one-third */
-  .landing-contact-form {
-    flex: 1; /* Allows the form to grow and fill two parts of the container */
-    margin-right: 20px; /* Adds some space between the form and the image */
-  }
+    .landing-contact-form {
+    margin-right: 20px; 
 }
 
 
