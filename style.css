@@ -770,7 +770,7 @@ nav a {
   .landing-contact-form textarea,
   .landing-contact-form .cta-landing-button {
     width: 100%; /* Subtract the total horizontal padding from the width */
-   
+    padding: 20px 20px;
     box-sizing: border-box; /* Include padding and border in the element's total width */  }
 }
 
