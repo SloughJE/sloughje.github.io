@@ -341,10 +341,28 @@ nav a {
   }
   
   /* General Section Styling */
+/* General Section Styling */
 .tabcontent {
     padding: 50px 0; /* More vertical padding for breathing space */
     margin: 20px 0; /* Space between sections */
-  }
+    margin: auto; /* Center-align the content within the available space */
+}
+
+.tabcontent2 {
+
+    margin: auto; /* Center-align the content within the available space */
+    max-width: 80%; /* Adjust the maximum width as needed */
+
+}
+/* Page Header Styling */
+.page-header {
+    font-size: 2rem; /* Set the desired font size */
+    text-align: left; /* Align the text to the left */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    /* Add any other styling you want to be common across both headers here */
+}
+
   
  /* Landing Header Styling */
 .landing-header {
@@ -494,6 +512,7 @@ nav a {
     border-radius: 10px; /* Add rounded corners with a specified radius */
 
   }
+
   .offerings:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
     border-radius: 10px; /* Add rounded corners with a specified radius */
@@ -504,15 +523,24 @@ nav a {
     padding-top: 5px; /* Adjust this value as needed for spacing */
     padding-bottom: 5px; /* Adjust this value as needed for spacing */
     list-style-position: outside;
+    padding: 10px 10px;
+
 }
 
 .offerings ul li:hover {
     background-color: #f0e1c2; /* Change the background color on hover */
     color: #333; /* Change the text color on hover */
     transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */
 }
 
-
+/* .servicesai {
+    background-color: #e4d6be; /* Change background color on hover 
+    border-radius: 10px; /* Add rounded corners with a specified radius 
+    padding: 10px 20px; /* Padding around the testimonials 
+  }
+*/
 
   /* Add a global box-shadow setting for card-like elements */
 .card-shadow {
@@ -537,18 +565,6 @@ nav a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
     border-radius: 10px; /* Add rounded corners with a specified radius */
 
-}
-
-#services {
-    max-width: 80%; /* Adjust the maximum width as needed */
-    margin: 0 auto; /* Center-align the content within the available space */
-    padding: 0 20px; /* Add proportional padding on the left and right */
-}
-
-#about {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 4rem 0; /* Added more vertical padding */
 }
 
 .about-container {
@@ -599,6 +615,8 @@ nav a {
     max-width: 100%; /* Adjust the maximum width as needed */
     margin: 0 auto; /* Center-align the content within the available space */
     padding: 0 20px; /* Add proportional padding on the left and right */
+    font-size: 1.4rem; /* Example size for the main heading */
+
 }
 
 .text-container {
@@ -714,6 +732,15 @@ nav a {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
         border-radius: 10px; /* Add rounded corners with a specified radius */
     
+    }
+    .offerings ul li {
+        background-color: #f0e1c2; /* Change the background color on hover */
+        color: #333; /* Change the text color on hover */
+        transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+        border-radius: 10px; /* Add rounded corners with a specified radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */
+        padding: 10px 10px;
+        margin: 10px 10px;
     }
 }
 
