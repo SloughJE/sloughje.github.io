@@ -753,7 +753,7 @@ nav a {
     .contact-container {
       display: flex;
       flex-direction: column;
-      align-items: center; /* Center-align the items on larger screens */
+      align-items: center; 
     }
    
     .landing-contact-container {
@@ -763,11 +763,12 @@ nav a {
       
     }
     .landing-contact-form {
-      width: 100%;
+      width: 80%;
     }
     .form-container {
-      padding: 60px; /* Add padding to the left side */
+      padding: 20px; /* Add padding to the left side */
     }
+    
   }
  
 
