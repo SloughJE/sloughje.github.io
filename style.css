@@ -535,7 +535,7 @@ nav a {
 }
 
   .offerings ul li {
-    list-style-type: disc;
+    list-style-type: none;
     padding-top: 5px; /* Adjust this value as needed for spacing */
     padding-bottom: 5px; /* Adjust this value as needed for spacing */
     list-style-position: outside;
