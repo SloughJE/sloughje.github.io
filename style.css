@@ -765,9 +765,18 @@ nav a {
     .landing-contact-container {
       flex-direction: column; /* Stack form and image vertically on mobile */
       align-items: center; /* Center-align the items on mobile */
+      margin-right: 0; /* Remove right margin on mobile */
+
     }
     .landing-contact-form {
-    margin-right: 20px; 
+      width: 100%;
+    }
+  
+    .landing-contact-form input,
+  .landing-contact-form textarea,
+  .landing-contact-form .cta-landing-button {
+    width: 100%;
+  }
 }
 
 
