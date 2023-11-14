@@ -517,7 +517,6 @@ nav a {
     background-color: #e4d6be; /* Change background color on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
     border-radius: 10px; /* Add rounded corners with a specified radius */
-
 }
 
 .project {
@@ -693,6 +692,11 @@ nav a {
         width: 100%; /* Full width to fit the container */
         box-sizing: border-box; /* Include padding in the width calculation */
         white-space: normal;
+    }
+    .project {
+        background-color: #e4d6be; /* Apply the hover background color by default */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */
+        border-radius: 10px; /* Apply the hover border radius by default */
     }
 }
 
