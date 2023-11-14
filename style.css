@@ -769,7 +769,7 @@ nav a {
     .landing-contact-form input,
   .landing-contact-form textarea,
   .landing-contact-form .cta-landing-button {
-    width: 100%;
+    width: 80%;
   }
 }
 
