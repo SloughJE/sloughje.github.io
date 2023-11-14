@@ -692,6 +692,7 @@ nav a {
     .cta-landing-button {
         width: 100%; /* Full width to fit the container */
         box-sizing: border-box; /* Include padding in the width calculation */
+        white-space: normal;
     }
 }
 
