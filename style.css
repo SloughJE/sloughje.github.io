@@ -623,12 +623,15 @@ nav a {
         flex-direction: column; /* Stack the brand and the links vertically */
         padding: 10px; /* Reduced padding */
         align-items: flex-start; /* Align items to the start of the nav bar */
+        padding-bottom: 20px; /* Add padding to the bottom */
+
     }
 
     .navbar-brand {
         margin-left: 10px; /* Align brand to the left */
         font-size: 1.2em; /* Smaller font size for the brand name */
         padding: 0; /* Remove padding */
+
     }
 
     .hamburger {
@@ -667,9 +670,8 @@ nav a {
     nav a {
         text-align: left; /* Align text to the left */
         padding: 10px 20px; /* Larger clickable area */
-        border-top: 1px solid #444; /* Add a border between the links */
         width: 100%; /* Full width for each link */
-        
+
     }
 
     /* Ensure the active state doesn't apply a background to the brand */
