@@ -11,7 +11,7 @@
 <!-- Sticky Navigation Bar -->
 <nav class="nav">
     <div class="navbar-brand">
-      <a href="javascript:void(0);" onclick="openTab('landing', this);">JS Data Science Consulting</a>
+      <a href="javascript:void(0);" onclick="openTab('landing', this);">JS DS Consulting</a>
     </div>
     <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
     <div class="nav-links">
@@ -24,15 +24,19 @@
 </nav>
   
   
-  <div class="container"> <!-- Container Around Everything -->
+<div class="container"> <!-- Container Around Everything -->
 
     <!-- Landing Section -->
     <section id="landing" class="tabcontent" style="display: block;">
         <div class="landing-header">
         <h1>JS Data Science Consulting</h1>
-        <h2>Model → Visualize → Collaborate</h2>
+        
+        <h2>Machine Learning ◆ Visualization ◆ Education</h2>
+        <!-- 
         <p>Raw Data to Collaborative Solutions for Decisive Impact.</p>
-        <button onclick="location.href='#contact';">Book My Free Consultation</button>
+        --> 
+        <button onclick="location.href='#contact-landing';">Book My Free Consultation</button>
+       
         </div>
         <div class="section-divider"></div>
 
@@ -72,22 +76,25 @@
             </div>
             <!-- Include more testimonials as needed -->
         </section>
-        <section id="contact" class="landing-cta">
-
-        <div class="section-divider"></div>
-            <h2>Book a Consult</h2>
+        
+        <section id="contact-landing" class="landing-cta">
+            <div class="section-divider"></div>
+            <h2>Book a Consultation</h2>
             <div class="landing-contact-container">
-              <form action="https://formspree.io/f/mgejqgzj" method="POST" class="landing-contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="_replyto" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Book My Free Consultation" class="cta-landing-button">
-                <span>We respect your privacy and never share your information.</span>
-
-              </form>
+              <div class="form-container">
+                <form action="https://formspree.io/f/mgejqgzj" method="POST" class="landing-contact-form">
+                  <input type="text" name="name" placeholder="Your Name" required>
+                  <input type="email" name="_replyto" placeholder="Your Email" required>
+                  <textarea name="message" placeholder="Your Message" required></textarea>
+                  <input type="submit" value="Book My Free Consultation" class="cta-landing-button">
+                </form>
+                <span class="privacy-statement">We respect your privacy and never share your information.</span>
+              </div>
+              <img src="assets/LinkedInModProfile.jpg" alt="Connect with Me" class="profile-pic">
             </div>
-
-        </section>
+          </section>
+          
+        
         <div class="section-divider"></div>  
           
         <section class="landing-faq">
@@ -321,22 +328,28 @@
       
 
     <section id="contact_page" class="tabcontent">
+
         <div class="contact-container">
-          <div class="contact-form">
-            <h2>Let's Connect!</h2>
-            <p>Book a consult or send a message.</p>
-            <form action="https://formspree.io/f/mgejqgzj" method="POST">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="_replyto" placeholder="Your Email" required>
-              <textarea name="message" placeholder="Your Message" required></textarea>
-              <button type="submit" class="cta-button">Submit</button>
-            </form>
-          </div>
-          <div class="contact-image">
-            <img src="assets/LinkedInModProfile.jpg" alt="Connect with Me">
-          </div>
+            <div class="section-divider"></div>
+
+            <h1>Let's Connect!</h1>
+            <div class="landing-contact-container">
+              <div class="form-container">
+                <form action="https://formspree.io/f/mgejqgzj" method="POST" class="landing-contact-form">
+                  <input type="text" name="name" placeholder="Your Name" required>
+                  <input type="email" name="_replyto" placeholder="Your Email" required>
+                  <textarea name="message" placeholder="Your Message" required></textarea>
+                  <input type="submit" value="Book My Free Consultation" class="cta-landing-button">
+                </form>
+                <span class="privacy-statement">We respect your privacy and never share your information.</span>
+              </div>
+              <img src="assets/LinkedInModProfile.jpg" alt="Connect with Me" class="profile-pic">
+            </div>
         </div>
+        <div class="section-divider"></div>
+
     </section>
+      
          
       
       
