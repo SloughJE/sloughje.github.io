@@ -64,6 +64,7 @@ header h1 {
   }
 
   footer {
+    flex-shrink: 0; /* Prevent footer from shrinking */
     background-color: #222;
     color: #fff;
     text-align: center;
@@ -755,7 +756,23 @@ nav a {
         padding: 10px 10px;
         margin: 10px 10px;
     }
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center-align the items on larger screens */
+    }
+   
+    .landing-contact-container {
+      flex-direction: column; /* Stack form and image vertically on mobile */
+      align-items: center; /* Center-align the items on mobile */
+    }
+    /* Assigns flex values to make the form two-thirds and profile pic one-third */
+  .landing-contact-form {
+    flex: 1; /* Allows the form to grow and fill two parts of the container */
+    margin-right: 20px; /* Adds some space between the form and the image */
+  }
 }
+
 
 
 /*
