@@ -614,7 +614,7 @@ nav a {
   }
 
 /* Media query for mobile screens */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     body {
         padding-top: 60px; /* Reduced padding to account for a smaller nav bar height */
     }
