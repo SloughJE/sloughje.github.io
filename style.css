@@ -769,8 +769,9 @@ nav a {
     .landing-contact-form input,
   .landing-contact-form textarea,
   .landing-contact-form .cta-landing-button {
-    width: 80%;
-  }
+    width: 100%; /* Subtract the total horizontal padding from the width */
+   
+    box-sizing: border-box; /* Include padding and border in the element's total width */  }
 }
 
 
