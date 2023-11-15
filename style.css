@@ -664,6 +664,12 @@ nav a {
     cursor: pointer;
   }
 
+  .privacy-statement {
+    display: block; /* Ensure it takes its own line */
+    white-space: normal; /* Allows text to wrap */
+    text-align: left; /* Centers the text, if that is your design intention */
+    font-size: 0.9rem; /* Adjust font size if necessary for small screens */
+  }
 /* Media query for mobile screens */
 @media (max-width: 1024px) {
     body {
@@ -769,6 +775,10 @@ nav a {
       width: 80%;
     }
  
+    .privacy-statement {
+  
+      padding-bottom: 20px;
+    }
     
   }
  
