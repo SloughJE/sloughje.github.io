@@ -325,7 +325,7 @@ nav a {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url('/assets/optuna_dashboard.png') no-repeat center center/cover; /* Path to your image */
+    background: url('/assets/animation.gif') no-repeat center center/cover; /* Path to your image */
     filter: blur(4px); /* Adjust the px value to increase/decrease the amount of blur */
     z-index: -1; /* Ensure the image stays behind the content */
   }
