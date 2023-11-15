@@ -772,7 +772,7 @@ nav a {
       width: 80%;
     }
     .form-container {
-      padding: 20px; /* Add padding to the left side */
+      /*padding: 20px;  Add padding to the left side */
       align-items: left;
 
     }
