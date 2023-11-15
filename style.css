@@ -776,7 +776,8 @@ nav a {
     }
  
     .privacy-statement {
-  
+      width: 80%;
+      font-size: 0.9rem; /* Adjust font size if necessary for small screens */
       padding-bottom: 20px;
     }
     
