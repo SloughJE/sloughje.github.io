@@ -446,7 +446,9 @@ nav a {
     display: flex; /* Establishes a flex context for the form and privacy statement */
     flex-direction: column; /* Stacks the form and privacy statement vertically */
     justify-content: space-between; /* Positions the form at the top and the privacy statement at the bottom */
+    align-items: left;
   }
+
 /* Assigns flex values to make the form two-thirds and profile pic one-third */
 .landing-contact-form {
     flex: 2; /* Allows the form to grow and fill two parts of the container */
@@ -640,8 +642,11 @@ nav a {
 .contact-container {
   padding: 0px 0px;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 }
 .contact-container h1 {
+  text-align: left;
   font-size: 2.5rem; /* Adjust the font size as needed */
   font-weight: bold; /* Optional: if you want the font to be bold */
   margin-bottom: 1rem; /* Adds some space below the header */
@@ -760,13 +765,16 @@ nav a {
       flex-direction: column; /* Stack form and image vertically on mobile */
       align-items: center; /* Center-align the items on mobile */
       margin-right: 0; /* Remove right margin on mobile */
-      
+      margin-left: 30px; /* Remove right margin on mobile */
+
     }
     .landing-contact-form {
       width: 80%;
     }
     .form-container {
       padding: 20px; /* Add padding to the left side */
+      align-items: left;
+
     }
     
   }
