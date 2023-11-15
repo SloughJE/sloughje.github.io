@@ -406,6 +406,8 @@ nav a {
     padding: 20px; /* Padding inside each testimonial */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow around elements */
     border-radius: 10px; /* Add rounded corners with a specified radius */
+    margin-bottom: 1.5rem; /* Adds space below the testimonial box */
+
 
   }
   
@@ -581,25 +583,24 @@ nav a {
 }
 
 .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start; /* Align items to the top */
-    gap: 20px; /* Adds space between flex items */
-    margin-bottom: 2rem; /* Space below the container */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Adds space between flex items */
 }
 
 .about-text {
-    flex: 1 1 60%; /* Flex grow, flex shrink, flex basis */
-    padding: 20px;
-    background-color: #e4d6be;
-    border-radius: 10px;
-    position: relative;
+  padding: 20px;
+  background-color: #e4d6be;
+  border-radius: 10px;
+  position: relative;
 }
 
 .about-text p {
-    font-size: 1rem; /* Adjust font size for readability */
-    line-height: 1.6; /* Adjust line height for readability */
-    margin-bottom: 1.5rem; /* Space between paragraphs */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 5px; /* Remove default top margin */
+  margin-bottom: 1.5rem; /* Space between paragraphs */
 }
 
 .professional-photo {
@@ -608,6 +609,10 @@ nav a {
     height: auto; /* Maintains aspect ratio */
     border-radius: 10px; /* Rounded corners for the image */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.about-text, .professional-photo {
+  flex: 1; /* Assign flex 1 to both text and image for equal sharing */
+  margin-top: 10px; /* Ensure no top margin is causing misalignment */
 }
 
 .about-text:hover {
@@ -622,6 +627,8 @@ nav a {
     width: 200px; /* Fixed width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Apply border-radius directly to the image */
+    align-self: flex-start; /* Align this item to the top */
+
 }
 
 .portfolio-head {
@@ -742,11 +749,7 @@ nav a {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */
         border-radius: 10px; /* Apply the hover border radius by default */
     }
-    .testimonial {
-        background-color: #f0e1c2; /* Change the background color on hover */
-        color: #333; /* Change the text color on hover */
-        transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
-    }
+
     .benefit {
         background-color: #e4d6be; /* Change background color on hover */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
