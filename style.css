@@ -825,6 +825,9 @@ nav a {
     .benefit {
       flex-direction: column; /* Stack children vertically */
       align-items: center; /* Center items horizontally for mobile */
+      background-color: #e4d6be; /* Change background color on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+      border-radius: 10px; /* Add rounded corners with a specified radius */
   }
   
   .benefit img {
@@ -833,8 +836,13 @@ nav a {
     max-width: 100%; /* Ensure it doesn't exceed the container's width */
     padding: 10px; /* Optional: Adjust padding if necessary */
     margin-bottom: 20px; /* Space between the image and the next element */
+    
   }
-  
+  .testimonial {
+    background-color: #f0e1c2; /* Change the background color on hover */
+    color: #333; /* Change the text color on hover */
+
+}
   }
  
  
