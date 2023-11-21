@@ -333,7 +333,7 @@ nav a {
   /* Ensure the content within .landing-header is positioned above the pseudo-element */
  /* Landing Header Text Styling */
 .landing-header h1 {
-    font-size: 3rem; /* Example size for the main heading */
+    font-size: 4rem; /* Example size for the main heading */
     margin-bottom: 0.5rem; /* Adds some space below the heading */
   }
   
@@ -409,10 +409,9 @@ nav a {
   .benefit img {
     height: auto; /* Fixed height for icons */
     width: 500px; /* Auto width to maintain aspect ratio */
-    border-radius: 30px;
-    padding: 20px;
-
-  }
+    border-radius: 30px; /* Rounded corners for the images */
+    padding: 20px; /* Reset padding for images, if not needed */
+}
   
 .benefit:hover {
   background-color: #e4d6be; /* Change background color on hover */
@@ -421,6 +420,16 @@ nav a {
 
 }
 
+.image-container-nasa {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+}
+
+.image-container-nasa img:last-child {
+  margin-top: 0;
+}
 
   /* Testimonial Section Styling */
   .landing-social-proof {
