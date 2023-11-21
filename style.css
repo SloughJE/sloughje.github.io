@@ -822,11 +822,22 @@ nav a {
       font-size: 0.9rem; /* Adjust font size if necessary for small screens */
       padding-bottom: 20px;
     }
-    
+    .benefit {
+      flex-direction: column; /* Stack children vertically */
+      align-items: center; /* Center items horizontally for mobile */
+  }
+  
+  .benefit img {
+    /* Adjust width and padding for mobile */
+    width: auto; /* Allow the image to scale with the container */
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    padding: 10px; /* Optional: Adjust padding if necessary */
+    margin-bottom: 20px; /* Space between the image and the next element */
+  }
+  
   }
  
-
-
+ 
 
 /*
 @media (max-width: 768px) {
