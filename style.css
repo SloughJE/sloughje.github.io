@@ -391,13 +391,15 @@ nav a {
     align-items: center; /* Vertically center the content */
     margin-top: 0px;
     align-items: flex-start;
+    padding: 10px;
+    margin-top: 0; /* Reset the top margin if needed */
+    margin-bottom: 0;
+    padding-top: 20px;
   }
 
   .benefit .benefit-text-content {
     flex: 1;
-    padding: 20px;
     padding-right: 50px;
-    margin-top: 0; /* Reset the top margin if needed */
   }
   .benefit-text-content h2 {
     
@@ -410,7 +412,6 @@ nav a {
     height: auto; /* Fixed height for icons */
     width: 500px; /* Auto width to maintain aspect ratio */
     border-radius: 30px; /* Rounded corners for the images */
-    padding: 20px; /* Reset padding for images, if not needed */
 }
   
 .benefit:hover {
@@ -418,17 +419,6 @@ nav a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
   border-radius: 10px; /* Add rounded corners with a specified radius */
 
-}
-
-.image-container-nasa {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-
-}
-
-.image-container-nasa img:last-child {
-  margin-top: 0;
 }
 
   /* Testimonial Section Styling */
