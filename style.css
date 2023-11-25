@@ -667,8 +667,8 @@ nav a {
 .portfolio-head {
     max-width: 100%; /* Adjust the maximum width as needed */
     margin: 0 auto; /* Center-align the content within the available space */
-    padding: 0 20px; /* Add proportional padding on the left and right */
-    font-size: 1.4rem; /* Example size for the main heading */
+    padding: 0 10px; /* Add proportional padding on the left and right */
+    font-size: 1.7rem; /* Example size for the main heading */
 
 }
 
