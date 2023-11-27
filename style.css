@@ -582,6 +582,45 @@ nav a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */
 }
 
+
+/* CTA Section Styling */
+.cta-section {
+  background-color: #e4d6be; /* A light background that stands out from the rest of the content */
+  border: 2px solid #C06070; /* A subtle border to define the section */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  border-radius: 10px; /* Add rounded corners with a specified radius */
+  padding: 10px 10px; 
+  margin: 50px 0px;
+
+}
+
+.cta-section:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */  
+}
+
+
+/* CTA Link Styling */
+.contact-link {
+  color: #C06070; /* A color that stands out */
+  font-weight: bold; /* Bold text for emphasis */
+  text-decoration: underline; /* Underline to suggest it is clickable */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.contact-link:hover {
+  color: #F08080; /* A color that stands out */
+
+}
+
+/* CTA Text Styling */
+.cta-statement {
+  font-size: 1.2rem; /* Slightly larger font for emphasis */
+  line-height: 1.6; /* Good line height for readability */
+  margin: 0; /* Reset margin for this section */
+  font-weight: bold;
+}
+
+
  .servicesai {
     background-color: #f0e1c2; /* Change background color on hover */
     border-radius: 10px; /* Add rounded corners with a specified radius */
