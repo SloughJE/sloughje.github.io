@@ -294,7 +294,7 @@ nav a {
 .tabcontent2 {
 
     margin: auto; /* Center-align the content within the available space */
-    max-width: 80%; /* Adjust the maximum width as needed */
+    max-width: 70%; /* Adjust the maximum width as needed */
 
 }
 /* Page Header Styling */
@@ -328,22 +328,34 @@ nav a {
     background: url('/assets/animation_main.gif') no-repeat center center/cover; /* Path to your image */
     filter: blur(4px); /* Adjust the px value to increase/decrease the amount of blur */
     z-index: -1; /* Ensure the image stays behind the content */
+    background-size: auto 108.8%; /* Increase the size to 120% of its container's height */
   }
   
-  /* Ensure the content within .landing-header is positioned above the pseudo-element */
- /* Landing Header Text Styling */
+  .landing-header {
+    padding-left: 30px;
+  }
+
+  /* Landing Header Text Styling */
 .landing-header h1 {
-    font-size: 4rem; /* Example size for the main heading */
+    font-size: 4.5rem; /* Example size for the main heading */
     margin-bottom: 0.5rem; /* Adds some space below the heading */
+    position: relative; /* Use relative positioning */
+    top: -46px; /* Adjust the value to move the button lower */
   }
   
+  .landing-header h2 {
+    font-size: 2.5rem; /* Example size for the main heading */
+    position: relative; /* Use relative positioning */
+    top: 7px; /* Adjust the value to move the button lower */
+  }
+
   .landing-header p {
     font-size: 1.5rem; /* Example size for the paragraph */
   }
   
 /* Landing Header Button Styling */
 .landing-header button {
-    font-size: 1.25rem; /* Adjusted font size for readability */
+    font-size: 1.5rem; /* Adjusted font size for readability */
     padding: 15px 30px; /* Increased padding for a larger button */
     margin-top: 1rem; /* Space above the button */
     cursor: pointer; /* Changes cursor to pointer when hovering over the button */
@@ -355,6 +367,8 @@ nav a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern-looking font */
     text-transform: uppercase; /* Makes text uppercase */
     letter-spacing: 0.05em; /* Adds spacing between letters */
+    position: relative; /* Use relative positioning */
+    top: 77px; /* Adjust the value to move the button lower */
   }
   
   .landing-header:hover {
@@ -450,10 +464,12 @@ nav a {
 
   /* FAQ Section Styling */
   .landing-faq {
-    margin: 20px; /* Add margin to all sides */
+    margin: 20px auto; /* Top and bottom margins as 20px, left and right as auto to center */
     background-color: #e4d6be; 
     padding: 20px 20px; /* Padding around FAQ section */
     border-radius: 10px; /* Add rounded corners with a specified radius */
+    max-width: 80%; /* Adjust the maximum width as needed */
+    
   }
   
   .landing-faq:hover {
