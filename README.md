@@ -23,7 +23,7 @@ The website is built with:
 
 ## Contact Information
 
-For inquiries or to schedule a consultation, please visit the [Contact](index.html#contact_page) section of the website. I look forward to assisting you in achieving your data science goals.
+For inquiries or to schedule a consultation, please visit the [Contact](https://sloughje.github.io/#contact-landing) section of the website. I look forward to assisting you in achieving your data science goals.
 
 ---
 
