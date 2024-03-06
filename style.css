@@ -105,8 +105,6 @@ nav {
     transition: max-height 0.3s; /* Smooth transition for the dropdown */
 
 }
-
-
   
 nav a {
     float: left;
@@ -584,7 +582,7 @@ nav a {
   border-radius: 10px; /* Add rounded corners with a specified radius */
   padding: 10px 10px;
   margin: 10px 0px;
-  background-color: #f0e1c2; /* Change the background color on hover */
+  background-color: #e4d6be;
   color: #333; /* Change the text color on hover */
   transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
   border-radius: 10px; /* Add rounded corners with a specified radius */
@@ -638,7 +636,7 @@ nav a {
 
 
  .servicesai {
-    background-color: #f0e1c2; /* Change background color on hover */
+    background-color: #e4d6be; /* Change background color on hover */
     border-radius: 10px; /* Add rounded corners with a specified radius */
     padding: 10px 10px; 
     margin: 10px 0px;
@@ -840,15 +838,7 @@ nav a {
 
 
 
-    .offerings ul li {
-        background-color: #f0e1c2; /* Change the background color on hover */
-        color: #333; /* Change the text color on hover */
-        transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
-        border-radius: 10px; /* Add rounded corners with a specified radius */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */
-        padding: 10px 10px;
-        margin: 10px 0px;
-    }
+
     
     
     .landing-contact-container {
