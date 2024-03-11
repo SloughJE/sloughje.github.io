@@ -351,7 +351,7 @@ nav a {
   
 /* Landing Header Button Styling */
 .landing-header button {
-    font-size: 1.6rem; /* Adjusted font size for readability */
+    font-size: 1.5rem; /* Adjusted font size for readability */
     padding: 15px 30px; /* Increased padding for a larger button */
     margin-top: 1rem; /* Space above the button */
     cursor: pointer; /* Changes cursor to pointer when hovering over the button */
@@ -361,6 +361,7 @@ nav a {
     color: white; /* White text */
     border-radius: 5px; /* Slightly rounded corners for a modern look */
     font-family: 'Open Sans', sans-serif; /* Modern-looking font */
+    font-weight: bold;
     text-transform: uppercase; /* Makes text uppercase */
     letter-spacing: 0.05em; /* Adds spacing between letters */
     position: relative; /* Use relative positioning */
