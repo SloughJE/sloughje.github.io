@@ -92,7 +92,7 @@ nav {
 
 .navbar-brand {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.7em; /* Make the brand name larger */
     display: inline; /* Adjust as needed for your layout */
     letter-spacing: 1px; /* Adds 2px spacing between letters */
@@ -245,7 +245,7 @@ nav a {
     border: none; /* No border */
     color: white; /* White text */
     border-radius: 5px; /* Slightly rounded corners for a modern look */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern-looking font */
+    font-family: 'Open Sans', sans-serif; /* Modern-looking font */
     text-transform: uppercase; /* Makes text uppercase */
     letter-spacing: 0.05em; /* Adds spacing between letters */
     
@@ -351,7 +351,7 @@ nav a {
   
 /* Landing Header Button Styling */
 .landing-header button {
-    font-size: 1.5rem; /* Adjusted font size for readability */
+    font-size: 1.6rem; /* Adjusted font size for readability */
     padding: 15px 30px; /* Increased padding for a larger button */
     margin-top: 1rem; /* Space above the button */
     cursor: pointer; /* Changes cursor to pointer when hovering over the button */
@@ -360,7 +360,7 @@ nav a {
     border: none; /* No border */
     color: white; /* White text */
     border-radius: 5px; /* Slightly rounded corners for a modern look */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern-looking font */
+    font-family: 'Open Sans', sans-serif; /* Modern-looking font */
     text-transform: uppercase; /* Makes text uppercase */
     letter-spacing: 0.05em; /* Adds spacing between letters */
     position: relative; /* Use relative positioning */
