@@ -275,12 +275,11 @@
         <div class="benefit">
             <div class="benefit-text-content">
                 <h2>Outbreak!</h2>
-                <p>The purpose of Outbreak! is to automatically identify weekly "Potential Outbreaks" and "Ongoing Potential Outbreaks" of Nationally Notifiable Diseases in the US and to showcase a cloud-based AWS project.
-                    <br>The Potential Outbreak detection model is SageMaker's DeepAR time series model which predicts normal disease occurrence distributions. 
-                    <br>Each week, data is retrieved from the CDC's NNDSS API. 
-                    If the actual reported cases exceed the chosen threshold of the model's predicted distribution, the system flags this as a potential outbreak. 
-                    <br>The application leverages AWS services including Lambda for processing updates and triggering the weekly Sagemaker retraining job, S3 for data storage, Athena for data querying, and CloudWatch for monitoring system operations. Results are displayed through a Plotly Dash interface hosted on an EC2 server.
-                    This project features full automation, managing everything from data retrieval and model retraining to the presentation of results.
+                <p>The purpose of Outbreak! is to automatically identify weekly "Potential Outbreaks" and "Ongoing Potential Outbreaks" of Nationally Notifiable Diseases in the US utilizing AWS cloud services.
+                    <br>SageMaker's DeepAR time series model, which predicts normal disease occurrence distributions, is used to detect potential outbreaks. 
+                    <br>Data is retrieved weekly from the CDC's NNDSS API, and if actual reported cases exceed the chosen threshold of the model's predicted distribution, it flags this as a potential outbreak. 
+                    <br>The application uses several AWS services including Lambda for processing updates and triggering the Sagemaker retraining job, S3 for data storage, Athena for data querying, and CloudWatch for monitoring. Results are displayed through a Plotly Dash interface hosted on an EC2 server.
+                    This project features full automation, managing everything from data retrieval and model retraining to the visualization of results.
                 </p>
                 <br>
                 <ul>
