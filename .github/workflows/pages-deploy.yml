@@ -1,0 +1,38 @@
+name: Build and Deploy Site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: true  # Fetch submodules
+
+    - name: Setup Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 3.1
+
+    - name: Install dependencies
+      run: |
+        cd blog
+        bundle install
+
+    - name: Build Jekyll site
+      run: |
+        cd blog
+        bundle exec jekyll build
+        mv _site ../_site/blog  # Move the built site to the main _site directory
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
