@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Data Science Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Sticky Navigation Bar -->
+<nav class="nav">
+    <div class="navbar-brand">
+      <a href="javascript:void(0);" onclick="openTab('landing', this);">JS DS Services LLC</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <div class="nav-links">
+      <a href="javascript:void(0);" onclick="openTab('landing', this);">Home</a>
+      <a href="javascript:void(0);" onclick="openTab('services', this);">Services</a>
+      <a href="javascript:void(0);" onclick="openTab('portfolio', this);">Portfolio</a>
+      <a href="javascript:void(0);" onclick="openTab('about', this);">About</a>
+      <a href="javascript:void(0);" onclick="openTab('contact_page', this);">Contact</a>
+    </div>
+</nav>
+  
+  
+<div class="container"> <!-- Container Around Everything -->
+
+    <!-- Landing Section -->
+    <section id="landing" class="tabcontent" style="display: block;">
+        <div class="landing-header">
+        <h1>JS Data Science Services</h1>
+        <h2>Machine Learning ◆ Data Visualization ◆ Education</h2>
+        <!-- 
+        <p>Raw Data to Collaborative Solutions for Decisive Impact.</p>
+        --> 
+        <button onclick="location.href='#contact-landing';">Book My Free Consultation</button>
+       
+        </div>
+        <div class="section-divider"></div>
+
+        <section class="landing-benefits">
+            <div class="benefit">
+                <div class="benefit-text-content">
+                    <!-- <img src="path-to-icon1.png" alt="icon1"> -->
+                    <h2>Machine Learning Solutions</h2>
+                    <h3>Predict. Classify. Detect. Forecast.</h3>
+                    <p>Tailored machine learning solutions convert your data into definitive results</p> 
+                    <p>Supported by clear, well-documented code for ease of use and integration.</p>
+                </div>
+                <div class="image-container">
+                    <img src="assets/animation_labels.gif" alt="classification animation" class="ml-solutions">
+                    
+                  </div>
+            </div>
+            <div class="section-divider"></div>
+                <div class="benefit">
+                    <div class="benefit-text-content">
+                            <h2>Interactive Visualizations</h2>
+                        <h3>Explore. Discover. Communicate.</h3>
+                        <p>Interactive visualizations designed to explore and interpret complex data effortlessly.</p>
+                        <p>Clear, clean, and intuitive design with communicative power.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="assets/UnHealth-Dash-short.gif" alt="data viz" class="dataviz-solutions">
+                    </div>
+                </div>
+            <div class="section-divider"></div>
+            <div class="benefit">
+                <div class="benefit-text-content">
+                    <h2>Advanced Data Science Training</h2>
+                    <h3>Question. Collaborate. Validate.</h3>
+                    <p>Advance your team’s data science proficiency, tailored for both analysts and management.</p> 
+                    <p>Bridge the gap between technical expertise and strategic application, empowering your team with the skills to apply advanced analytics for impactful business decisions.</p>
+                </div>
+                <div class="image-container">
+                    <img src="assets/straps_flowchart.gif" alt="data viz" class="dataviz-solutions">
+                    
+                </div>
+            </div>
+            
+        </section>
+        <!--
+        <div class="section-divider"></div>
+        <section class="landing-social-proof">
+            <div class="testimonial">
+              <img src="path-to-testimonial1.jpg" alt="testimonial1">
+              <blockquote>"Example Quote."</blockquote>
+              <p>- CEO of Test</p>
+            </div>
+        </section>
+        -->
+        <section id="contact-landing" class="landing-cta">
+            <div class="section-divider"></div>
+              <div class="landing-contact-container">
+                <div class="form-container">
+                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjUjf24Xe5gvY41zIAtzlYg8mfKEqKNjn_tXldvomqMmVOPQ/viewform?embedded=true" width="100%" height="480" frameborder="0" marginheight="0" marginwidth="0">Loading Contact Form</iframe>
+                  <span class="privacy-statement">We respect your privacy and never share your information.</span>
+                </div>
+                <img src="assets/LinkedInModProfile.jpg" alt="Connect with Me" class="profile-pic">
+
+            </div>
+          </section>
+        
+        <div class="section-divider"></div>  
+          
+        <section class="landing-faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <details class="faq-item">
+              <summary>What kind of data science services do you offer?</summary>
+              <p>I offer comprehensive data science services including data analysis, predictive modeling, machine learning, data visualization, and deployment of scalable data products. See the <a href="javascript:void(0);" onclick="openTab('services', this);" class="contact-link"><strong>services</strong></a> page for more information.</p>
+              <p>Data Science is a very broad area and encompasses many specialities. If your project falls outside of my areas of expertise, I will be upfont about it and do my best to find others in my network who are experts in that particular area to assist you.</p>
+            </details>
+          
+            <details class="faq-item">
+              <summary>How can I engage your data science consulting services?</summary>
+              <p>Clients can engage my services through several flexible models tailored to meet different needs and project scopes:</p>
+              <ul>
+                <li><strong>Hourly Consulting:</strong> Best for advice, guidance, or specific tasks without a long-term commitment.</li>
+                <li><strong>Retainer:</strong> Perfect for ongoing support, a retainer agreement ensures you have guaranteed access to my time for a set number of hours each week or month.</li>
+                <li><strong>Subscription:</strong> Similar to retainer, but focused on regular, predefined data science services, such as monthly analytics reports or ML model maintenance.</li>
+                <li><strong>Project-Based Pricing:</strong> Suitable for projects with specific deliverables and timelines. This fixed-price model is based on the project's scope and complexity.</li>
+              </ul>
+            </details>
+            
+            <details class="faq-item">
+              <summary>How do you ensure the confidentiality of our data?</summary>
+              <p>Your data's security and confidentiality are my top priorities. I employ strict data governance policies including data access controls, data retention and deletion, and use secure methods for data transfer and storage. I have previously worked with highly sensitive data including aerospace data from <a href="https://aviationsystems.arc.nasa.gov/publications/2021/20210017594_Wesely_Aviation2021_paper.pdf" target="_blank">NASA</a> and the FAA, and healthcare data. I will gladly work closely with your security or IT teams to ensure secure access to data and compliance with your organization's security protocols. </p>
+            </details>
+          
+            <details class="faq-item">
+              <summary>What industries do you specialize in?</summary>
+              <p>While I am equipped to serve a variety of industries, my expertise is particularly strong in healthcare, cybersecurity, aerospace, utilities and hospitality, where I’ve delivered tailored data-driven solutions.</p>
+            </details>
+          
+            <details class="faq-item">
+              <summary>How can machine learning benefit my business?</summary>
+              <p>Machine learning can uncover patterns and predictions that inform strategic decisions, streamline operations, improve customer experiences, and ultimately drive growth.</p>
+            </details>
+          
+            <details class="faq-item">
+              <summary>What is the typical timeline for a data science project?</summary>
+              <p>Project timelines can vary widely based on complexity and scope. After an initial consultation, I will provide a detailed project timeline with key milestones and deliverables.</p>
+            </details>
+          
+            <details class="faq-item">
+              <summary>Can small businesses benefit from data science?</summary>
+              <p>Absolutely. Whether you have existing data or need assistance in gathering and structuring your data, data science offers valuable insights that can significantly benefit small businesses. As a data scientist, I understand the importance of proper data collection procedures and can assist in identifying the right data sources and implementing effective data gathering strategies. These insights can help small businesses operate more efficiently, understand their customers better, and make informed, data-driven decisions.</p>
+            </details>
+          
+            <details class="faq-item">
+              <summary>What sets you apart from other data science consultants?</summary>
+              <p>My unique approach combines technical expertise with a deep understanding of business strategy, ensuring that solutions are not only statistically sound but also commercially viable. I believe in creating solutions that strike the right balance between complexity and simplicity. While complexity is sometimes necessary to achieve sophisticated results, I prioritize simplicity wherever possible, aiming for solutions that are elegant and easy to implement. This approach ensures that the solutions I deliver are not overly complex, but instead, just complex enough to achieve the desired outcomes efficiently and effectively.</p>
+            </details>
+          
+            <details class="faq-item">
+              <summary>Do I need to have a data science team in place to work with you?</summary>
+              <p>No, I can work independently or alongside your existing team to complement and enhance your data science capabilities.</p>
+            </details>
+          
+            <details class="faq-item">
+              <summary>How do you approach a new data science project?</summary>
+              <p>I start with a discovery phase to understand your business objectives and the available data, followed by data exploration, model development, and deployment, with a focus on actionable insights.</p>
+            </details>
+          
+            <details class="faq-item">
+              <summary>Are your solutions scalable as my business grows?</summary>
+              <p>Absolutely. I design solutions with scalability in mind, ensuring they can evolve in line with your business growth and data complexity.</p>
+            </details>
+            
+        </section>
+    </section>
+    
+    <section id="about" class="tabcontent">
+        <section class="tabcontent2">
+        <h2 class="page-header">About John Slough II</h2>
+        <div class="about-container"> <!-- Flex container for the about section -->
+
+                <div class="about-text">
+
+                    <!-- Professional photo -->
+                    <img src="assets/LinkedInModProfile.jpg" alt="John Slough II" class="professional-photo">
+                    <!-- 
+                    <p>With years of experience in data science consulting, I've helped organizations transform complex data into actionable strategies. My expertise lies in not just analyzing data, but in crafting narratives that drive decision-making across various industries. From retail and manufacturing to healthcare and aerospace, I've navigated the unique challenges each sector presents and delivered tailored data-driven solutions.</p>
+                
+                    <p>My journey in data science has been a blend of continuous learning and practical application. After obtaining a Master's in Statistics and an MBA, I delved into the world of consulting where I've helped businesses leverage data for competitive advantage. Whether it's through developing forecasting models to streamline operations or creating intuitive dashboards for real-time decision support, I've seen firsthand the transformative impact of well-applied data science.</p>
+                
+                    <p>Among the highlights of my consulting tenure was collaborating with NASA to refine aircraft landing time predictions. This project not only enhanced air traffic management but also led to a <a href="https://aviationsystems.arc.nasa.gov/publications/2021/20210017594_Wesely_Aviation2021_paper.pdf" target="_blank">published article</a>, showcasing the project's success and the practical benefits of predictive analytics.</p>
+                
+                    <p>My practical experience is complemented by projects that are close to my heart, like developing a machine learning solution for <a href="https://github.com/SloughJE/aerial_straps_classifier"target="_blank">classifying aerial straps poses</a>. It's a project that covers the full spectrum of data science work - from conception, data collection and preprocessing to model development and deployment. It exemplifies my commitment to real-world applications of machine learning, bridging the gap between theoretical models and practical solutions.</p>
+
+                    <p>I offer services ranging from machine learning model development to setting up data visualizations and analysis pipelines. My approach is always to simplify without oversimplifying, ensuring that the insights are clear, concise, and, above all, actionable.</p>
+                
+                    <p>If your business is looking to harness the power of data science without getting lost in technicalities, I am here to guide you through the journey. Let's unveil the stories hidden within your data together.</p>
+                    -->
+                    <p>My journey into data science began while pursuing an dual MBA and MSc in Information and Communications Technology Business Management from Virginia Tech and Telecom Business School in Évry, France. It was during these programs, particularly through my MBA, that I discovered a fascination for statistics its application to real-world problems. Eventually, I convinced myself to pursue a Master's in Statistics from University College Dublin.</p>
+                    <p>After obtaining the Master's in Statistics, I began working in data science consulting in Virginia. 
+                        My six-plus years of consulting introduced me to working on a large variety of projects, in many different industries. </p> 
+                    <p>My work ranged from constructing energy dashboards for a utility company to optimizing machine learning models to predict intra-flight aircraft landing times for NASA. 
+                        I developed models to predict hotel stays and arrivals for a hospitality company, and for a client consulting company I created an interactive dashboard that modeled their network traffic for online meetings.</p>
+                    <p>In addition to consulting, I worked directly for a cybersecurity company, developing machine learning models to identify malware and anomalies in network traffic.</p> 
+                    <p>Clear communication and straightforward solutions emerged as the most important aspects of my work, ensuring that everyone, especially those non-technical, could understand the impact of the data science solutions on their business.</p>
+
+                    <p>With this background in agile, project-based approaches, I set up my own data science business to provide focused and efficient data science services. I cater to those in need of a skilled data scientist who adapts quickly, communicates effectively, and values simplicity over complexity in solution design.</p>
+                                                
+                    <!--
+                    <div class="testimonial">
+                        <blockquote>
+                        "It's essential that stakeholders understand the basics of machine learning and data visualization; this prompts beneficial dialogue and deepens insight into the technologies' business impact."
+                        </blockquote>
+                    </div>
+                    -->
+                    <p>Located in Richmond, VA, I'm <a href="javascript:void(0);" onclick="openTab('contact_page', this);" class="contact-link"><strong>available</strong></a> to work with partners from around the world.</p>
+                    <a href="https://www.linkedin.com/in/johneslough/" target="_blank">LinkedIn Profile</a>
+
+                </div>
+        </div>
+    </section>
+    </section>
+      
+    <section id="services" class="tabcontent">
+        <section class="tabcontent2">
+
+          <h2 class="page-header">Data Science Services</h2>
+          <!-- <p>Analyze Understand Simplify Implement</p> -->
+          <div class="offerings">
+
+          <ul>
+            <li>With over 8 years of data science experience, I offer services aimed at transforming complex data into useful solutions and practical tools, and communicating results effectively.<br> 
+              My goal is to offer the expertise of a full-time data scientist, with the flexibility and efficiency of a consultant, delivering straightforward machine learning and data science solutions.
+              </li>
+          </ul>
+          </div>
+          <div class="offerings">
+
+            <h2>Core Services</h2>
+              <ul>
+                  <li><strong>Machine Learning Solutions:</strong> Crafting predictive models and custom ML algorithms to turn data into definitive results, supported by clear, well-documented code.</li>
+                  <li><strong>Interactive Visualizations:</strong> Designing intuitive visualizations and dashboards with tools like Plotly and Dash to make complex data understandable and actionable.</li>
+                  <li><strong>Statistical Analysis and Modeling:</strong> Providing expert statistical analysis. Hypothesis testing, A/B testing, and complex modeling, supporting research and business insights.</li>
+                  <li><strong>Data Wrangling and Processing for Analysis:</strong> Transforming raw data into clean, usable datasets. Automated data pipelines that process data for machine learning or visualizations ensuring your data is analysis-ready.</li>
+                  <li><strong>Advanced Data Science Training:</strong> Training for non or semi-technical professionals to deepen their understanding of ML and statistics, enabling them to question, collaborate, and validate ML and statistical solutions effectively.</li>
+                  <li><strong>Operationalization and Deployment:</strong> Implementing solutions in scalable environments using tools like AWS Sagemaker, GCR, and Docker, with tracking via MLflow for operational excellence.</li>
+                  <!-- <li><strong>API and Automation Services:</strong> Developing APIs for seamless model integration and automating data workflows to enhance efficiency and consistency.</li>
+                  -->  
+              </ul>
+          </div>
+          <h2>AI, Data Science, and Education</h2>
+          <p><strong>"Let's just ChatGPT it!"</strong></p>
+
+          <div class="servicesai">
+              <p> 
+                  Although AI tools like ChatGPT are revolutionizing how we interact with data, the human element remains crucial. 
+                  Understanding the nuances of your data, the context of your industry, and the strategic implications of analytical findings cannot be fully automated. 
+                  One needs to know the right questions to ask and this begins with education. AI serves as a powerful assistant, not a replacement, in the art of decision-making with data.</p>
+              </p>
+            </div>
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <p class="cta-statement">Ready to enhance your business with data science that makes a difference?</p>
+              <p class="cta-statement"><a href="javascript:void(0);" onclick="openTab('contact_page', this);" class="contact-link">Reach out</a> and let's explore how we can turn your data into a strategic asset.
+              </p>
+            </div>
+        </section>
+    </section>
+      
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="tabcontent">
+        <div class="portfolio-head">
+        <h1>Portfolio</h1>
+        </div>
+
+        <div class="section-divider"></div>
+        <div class="benefit">
+            <div class="benefit-text-content">
+                <h2>Outbreak!</h2>
+                <p>The purpose of Outbreak! is to automatically identify weekly "Potential Outbreaks" and "Ongoing Potential Outbreaks" of Nationally Notifiable Diseases in the US using AWS cloud services.
+                  <br>All steps in this project are fully automated, covering everything from data retrieval and model retraining to the visualization of results.
+                  <br>The application employs several AWS services: Lambda for pulling new data from the CDC NNDSS API and initiating model retraining, SageMaker for training, deploying, and making predictions with the DeepAR model, S3 for data storage, Athena for data querying, CloudWatch for monitoring, and IAM for managing secure access. Results are displayed through a Plotly Dash interface hosted on an EC2 server.  
+                </p>
+                <br>
+                <ul>
+                    <li><a href="https://outbreak-tracker.com/" target="_blank">Outbreak Website</a></li>
+                </ul>
+            </div>
+            <div class="image-container">
+                <img src="assets/outbreak-screengrab.gif" alt="Outbreak Thumbnail" class="project-outbreak">
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+        <div class="benefit">
+            <div class="benefit-text-content">
+                <h2>Aerial Straps Pose Classifier</h2>
+                <p>This project illustrates an ML project from conception to deployment: from data gathering and labeling to model versioning and deployment. It uses computer vision and machine learning to classify aerial straps poses. Features OpenCV, MediaPipe, Optuna, MLflow, fastAPI, Docker, and GCR.</p>
+                <br>
+                <ul>
+                    <li><a href="https://aerial-straps-classifier-n3pdpbqp5a-ue.a.run.app/" target="_blank">Live App deployed on Google Cloud Run</a></li>
+                    <li><a href="https://github.com/SloughJE/aerial_straps_classifier" target="_blank">GitHub Repository</a></li>
+                  </ul>
+            </div>
+            <div class="image-container">
+                <img src="assets/blever_flever_crop.gif" alt="Aerial Straps Pose Classifier Thumbnail" class="project-straps">
+            </div>
+        </div>
+        
+        <div class="section-divider"></div>
+        <div class="benefit">
+            <div class="benefit-text-content">
+                <h2>The UnHealth Dashboard with A.I. Patient Analysis</h2>
+                <p>An interactive county-focused public health dashboard integrating CDC PLACES data, BEA and BLS economic data and synthetic patient data. 
+                    The dashboard presents the UnHealth Score, a summary statistic that aggregates data from multiple health indicators, facilitating direct comparisons between counties.
+                    <br>The A.I. Patient Analysis explores simulated individual patient data using an AI-generated patient summary which integrates patient history, current health status, local health metrics and the UnHealth Score.
+                </p>
+                <br>
+                <ul>
+                    <li><a href="https://unhealth-dashboard-6d75504325c4.herokuapp.com" target="_blank">Live App deployed on Heroku</a></li>
+                    <li><a href="https://github.com/SloughJE/UnHealth_Dashboard" target="_blank">GitHub Repository</a></li>
+                </ul>
+            </div>
+            <div class="image-container">
+                <img src="assets/UnHealth-Dash-short.gif" alt="data viz" class="dataviz-solutions">
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+        <div class="benefit">
+            <div class="benefit-text-content">
+                <h2>NASA ATD-2 Machine Learning for Predicting Aircraft Landing Times</h2>
+                <p>This project, in collaboration with researchers at NASA, involved developing machine learning models to improve the accuracy of intra-flight aircraft landing time predictions. The model used features calculated in real-time from readily available data for airborne flights and led to significant improvents in prediction accuracy.</p>
+                <br>
+                <ul>
+                    <li><a href="https://aviationsystems.arc.nasa.gov/publications/2021/20210017594_Wesely_Aviation2021_paper.pdf" target="_blank">Research Paper</a></li>
+                  </ul>
+            </div>
+            <div class="image-container">
+                <img src="assets/nasa_chart.gif" alt="NASA Waterfall Chart">
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+            <div class="benefit">
+                <div class="benefit-text-content">
+                    <h2>Interactive Resume with Plotly Dash</h2>
+                    <p>My interactive resume created using Plotly Dash to dynamically present my professional experience and skills visually.</p>
+                    <br>
+                    <ul>
+                        <li><a href="https://slough.herokuapp.com/" target="_blank">Live App deployed on Heroku</a></li>
+                        <li><a href="https://github.com/SloughJE/Resume" target="_blank">GitHub Repository</a></li>
+                    </ul>
+                </div>
+                <div class="image-container">
+                    <img src="assets/dash_resume_grab.gif" alt="data viz" class="dataviz-solutions">
+                </div>
+            </div>
+          
+        <div class="section-divider"></div>
+
+        <div class="benefit">
+            <div class="benefit-text-content">
+                <h2>Podcast Episode Newsletter Creation Tool</h2>
+                <p>A tool that automates the creation of a newsletter for a podcast episode. It transcribes the episode using the Whisper model, generates a summary and inspiring takeaway using the OpenAI GPT-3.5 Turbo API, and an image based on the podcast summary using the DALL-E API. A demo app is deployed on Streamlit.</p>
+                <br>
+                <ul>
+                    <li><a href="https://podcastsummary-jslough.streamlit.app/" target="_blank">Demo App deployed on Streamlit</a></li>
+                    <li><a href="https://github.com/SloughJE/podcast_summary" target="_blank">GitHub Repository</a></li>
+                  </ul>
+            </div>
+            <div class="image-container">
+                <img src="assets/podcast_grab.gif" alt="data viz" class="dataviz-solutions">
+            </div>
+        </div>
+
+        <div class="section-divider"></div>  
+ 
+    </section>
+      
+    <section id="contact_page" class="tabcontent">
+        <div class="contact-container">
+        <div class="section-divider"></div>
+            <div class="landing-contact-container">
+              <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjUjf24Xe5gvY41zIAtzlYg8mfKEqKNjn_tXldvomqMmVOPQ/viewform?embedded=true" width="100%" height="480" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+             
+                <span class="privacy-statement">We respect your privacy and never share your information.</span>
+              </div>
+              <img src="assets/LinkedInModProfile.jpg" alt="Connect with Me" class="profile-pic">
+            </div>
+        </div>
+        <div class="section-divider"></div>
+
+    </section>
+      
+         
+      
+      
+      
+  </div>
+
+  <footer>
+    <p>© 2024 by JS Data Science Services LLC</p>
+  </footer>
+  
+    <script>
+    function openTab(tabName, element) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    tablinks = document.querySelectorAll(".nav-links a");
+
+    // Hide all tab contents
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove "active" class from all tab links
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    // Display the clicked tab's content and add "active" class to the clicked tab link
+    document.getElementById(tabName).style.display = "block";
+    if (element) {
+        element.classList.add("active");
+    }
+
+    // Close the hamburger menu by removing 'open' class from nav-links
+    var links = document.querySelector('.nav-links');
+    links.classList.remove('open');
+    }
+
+    // Set landing as the default tab and active state
+    document.addEventListener("DOMContentLoaded", function() {
+    var defaultTab = 'landing';
+    openTab(defaultTab);
+    document.querySelector(".nav-links a[href='javascript:void(0);'][onclick*='" + defaultTab + "']").classList.add("active");
+    });
+
+
+  </script>
+
+<script>
+  // JavaScript function to toggle the menu
+    function toggleMenu() {
+    var links = document.querySelector('.nav-links');
+    // Toggle the 'open' class on the '.nav-links'
+    links.classList.toggle('open');
+        }
+</script>
+
+
+
+</body>
+</html>

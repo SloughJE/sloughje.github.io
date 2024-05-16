@@ -1,0 +1,923 @@
+/* Use Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+/* Consistent color scheme example */
+:root {
+    --primary-color: #F08080; /* Your primary brand color */
+    --hover-color: #C06070; /* A darker variant for hover states */
+    --background-color: #E4DCCF; /* A light background color */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding-top: 80px; /* Add top padding to account for fixed navbar height */
+    background-color: var(--background-color);
+    color: #333;
+}
+
+input, textarea, button, img {
+    border-radius: 6px;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    flex: 1; /* Allows content to grow and occupy any available space */
+}
+
+  .about, .portfolio, .contact {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .contact form {
+    max-width: 300px;
+    margin: auto;
+  }
+  .contact input, .contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+  }
+  .contact input[type=submit] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .contact input[type=submit]:hover {
+    opacity: 0.9;
+  }
+
+  footer {
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  
+/* Navigation bar */
+nav {
+    background-color: #333;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Stays on top */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center; /* Center items vertically */
+    padding: 20px 20px; /* Add some horizontal padding */
+    line-height: 40px; /* Adjust this line height to match the nav's height */
+    height: 30px; /* Or whatever your fixed nav height is */
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.7em; /* Make the brand name larger */
+    display: inline; /* Adjust as needed for your layout */
+    letter-spacing: 1px; /* Adds 2px spacing between letters */
+    padding: 0 20px; /* Optional: adds padding on the left and right */
+}
+
+.nav-links{
+    padding: 0 20px;
+    font-size: 1.25em;
+    transition: max-height 0.3s; /* Smooth transition for the dropdown */
+
+}
+  
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-brand a {
+    color: white;
+    text-decoration: none; /* Removes underline from links */
+    /* Remove any padding if you don't want the clickable area to be too large */
+}
+
+/* Make sure the brand link doesn't get the active styling */
+.navbar-brand a.active, .navbar-brand a:hover {
+    background-color: transparent; /* Ensures no background color */
+    color: white; /* Keeps the text color white */
+    border-bottom: none; /* No border */
+}
+
+/* Navigation Bar Active Link for nav-links only */
+.nav-links a.active {
+    background-color: #F08080; /* Coral Pink for active links */
+    color: white; /* White text color for active links */
+    border-bottom: 3px solid #C06070; /* Darker shade for the bottom border */
+}
+
+/* For hovered links in nav-links only (optional, for better UX) */
+.nav-links a:hover {
+    background-color: #C06070; /* Darker pink for hover state */
+    color: white;
+    border-bottom: 3px solid #F08080; /* Darker shade for the bottom border */
+}
+
+
+.iframe-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+.iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  
+/* This will apply to the container of each project */
+.project {
+    display: flex;
+    flex-direction: column; /* Stack project content vertically */
+    margin-bottom: 20px; /* Add space between each project */
+  }
+  
+  /* This will apply to the container that holds both images */
+  .image-container {
+    display: flex;
+    justify-content: start;
+    gap: 20px; /* Space between the two images */
+    margin-bottom: 10px; /* Space between the image container and the project description */
+    padding-right: 20px; /* Add padding to the right to create space */
+  }
+  
+  /* This will apply to each image within the image container */
+  .project-thumbnail {
+    max-height: 180px; /* or any other value that suits your design */
+    width: auto; /* This will scale the width proportionally */
+    object-fit: contain; /* This ensures the image is fully contained within the element's box, potentially leaving some space empty */
+  }
+  
+  
+/* FAQ Section */
+/* Style for the summary element */
+.faq-item summary {
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Style for the summary element on hover */
+  .faq-item summary:hover {
+    background-color: #f0e1c2; /* Change the background color on hover */
+    color: #000; /* Darker text to indicate interactivity */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+  }
+
+  /* Reset the list marker style */
+  .faq-item details {
+    list-style: none;
+  }
+  
+  .faq-item details summary::-webkit-details-marker {
+    display: none; /* Hide the default arrow in webkit browsers */
+  }
+  
+  /* Optional: Style the 'open' state to give some feedback */
+  .faq-item[open] summary {
+    color: #C06070; /* Example: Change color when the item is open */
+    background-color: #f0e1c2; 
+
+  }
+
+  
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  input[type="submit"] { /* Add input[type="submit"] here */
+    width: 80%;
+    padding: 1rem;
+    font-size: 1rem; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    box-sizing: border-box; /* Ensure padding is within the width */
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus,
+  input[type="submit"]:focus { /* Add focus style for submit button if needed */
+    outline: none;
+    border-color: #555;
+  }
+  
+  .cta-button {
+    width: 100%;
+    font-size: 1.25rem; /* Adjusted font size for readability */
+    padding: 15px 30px; /* Increased padding for a larger button */
+    margin-top: 1rem; /* Space above the button */
+    cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    background-color: #F08080; 
+    border: none; /* No border */
+    color: white; /* White text */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    font-family: 'Open Sans', sans-serif; /* Modern-looking font */
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 0.05em; /* Adds spacing between letters */
+    
+  }
+  
+  .cta-button:hover,
+  .cta-button:focus { /* Styles for hover and focus states */
+    background-color: #C06070; /* A darker shade of blue for hover */
+    outline: none; /* Removes the outline on focus for a clean look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover for depth */
+  }  
+
+  .contact-image {
+    flex-basis: 50%;
+    position: relative; /* Make the container relative so the pseudo-element is positioned relative to the image */
+    overflow: hidden; /* This will ensure that the pseudo-element doesn't extend beyond the image */
+    display: flex;
+    justify-content: right; 
+    align-items: center; /* This will center the image verti */
+    margin-bottom: 1rem; /* Aligns with margin-bottom of input fields */
+
+  }
+  
+  .contact-image img {
+    width: 65%; /* Adjust width to 100% to fill the container */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 8px;
+    opacity: .9; /* Adjust opacity as needed */
+    display: block; /* Make sure the image is a block-level element to fit the container */
+    padding: 1rem; /* Padding to align with the inputs and button */
+
+  }
+  
+
+/* General Section Styling */
+.tabcontent {
+    padding: 50px 0; /* More vertical padding for breathing space */
+    margin: 20px 0; /* Space between sections */
+    margin: auto; /* Center-align the content within the available space */
+}
+
+.tabcontent2 {
+
+    margin: auto; /* Center-align the content within the available space */
+    max-width: 70%; /* Adjust the maximum width as needed */
+
+}
+/* Page Header Styling */
+.page-header {
+    font-size: 2rem; /* Set the desired font size */
+    text-align: left; /* Align the text to the left */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    /* Add any other styling you want to be common across both headers here */
+}
+
+  
+ /* Landing Header Styling */
+.landing-header {
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+    font-size: 1.5rem;
+    position: relative; /* Ensure the pseudo-element is positioned in relation to this */
+    color: #ffffff; /* White text color for better contrast */
+    padding: 200px 20px; /* More padding for a spacious header */
+    overflow: hidden; /* Prevents the pseudo-element from causing scrollbars */
+    
+  }
+  
+  .landing-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('/assets/animation_main.gif') no-repeat center center/cover; /* Path to your image */
+    filter: blur(4px); /* Adjust the px value to increase/decrease the amount of blur */
+    z-index: -1; /* Ensure the image stays behind the content */
+    background-size: auto 108.8%; /* Increase the size to 120% of its container's height */
+  }
+  
+  .landing-header {
+    padding-left: 30px;
+  }
+
+  /* Landing Header Text Styling */
+.landing-header h1 {
+    font-size: 4.5rem; /* Example size for the main heading */
+    margin-bottom: 0.5rem; /* Adds some space below the heading */
+    position: relative; /* Use relative positioning */
+    top: -46px; /* Adjust the value to move the button lower */
+  }
+  
+  .landing-header h2 {
+    font-size: 2.5rem; /* Example size for the main heading */
+    position: relative; /* Use relative positioning */
+    top: 7px; /* Adjust the value to move the button lower */
+  }
+
+  .landing-header p {
+    font-size: 1.5rem; /* Example size for the paragraph */
+  }
+  
+/* Landing Header Button Styling */
+.landing-header button {
+    font-size: 1.5rem; /* Adjusted font size for readability */
+    padding: 15px 30px; /* Increased padding for a larger button */
+    margin-top: 1rem; /* Space above the button */
+    cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    background-color: #F08080; 
+    border: none; /* No border */
+    color: white; /* White text */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    font-family: 'Open Sans', sans-serif; /* Modern-looking font */
+    font-weight: bold;
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 0.05em; /* Adds spacing between letters */
+    position: relative; /* Use relative positioning */
+    top: 77px; /* Adjust the value to move the button lower */
+  }
+  
+  .landing-header:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+  }
+
+  .landing-header button:hover,
+  .landing-header button:focus { /* Styles for hover and focus states */
+    background-color: #C06070; /* A darker shade of blue for hover */
+    outline: none; /* Removes the outline on focus for a clean look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover for depth */
+  }
+  
+  .landing-header button:hover {
+    transform: translateY(-1px); /* Moves the button up slightly more */
+  }
+  
+  /* You may also want to adjust the line-height for better readability */
+  .landing-header h1,
+  .landing-header p {
+    line-height: 1.2;
+  }
+  
+  /* Benefit Section Styling */
+  .landing-benefits {
+    margin-bottom: 30px; /* Space between benefit items */
+  }
+  
+  .benefit {
+    background-color: #E4DCCF;
+    border-radius: 10px;
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center the content */
+    margin-top: 0px;
+    align-items: flex-start;
+    padding: 10px;
+    margin-top: 0; /* Reset the top margin if needed */
+    margin-bottom: 0;
+    padding-top: 20px;
+  }
+
+  .benefit .benefit-text-content {
+    flex: 1;
+    padding-right: 50px;
+  }
+  .benefit-text-content h2 {
+    
+    margin-top: 0; /* Removes the top margin */
+    margin-bottom: 0.5rem; /* Adds a little space below the h2 */
+  }
+
+
+  .benefit img {
+    height: auto; /* Fixed height for icons */
+    width: 500px; /* Auto width to maintain aspect ratio */
+    border-radius: 30px; /* Rounded corners for the images */
+}
+  
+.benefit:hover {
+  background-color: #e4d6be; /* Change background color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+  border-radius: 10px; /* Add rounded corners with a specified radius */
+
+}
+
+  /* Testimonial Section Styling */
+  .landing-social-proof {
+    background-color: #e4d6be; /* Light background for testimonials */
+    padding: 40px 20px; /* Padding around the testimonials */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow around elements */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
+
+  }
+  
+  .testimonial {
+    max-width: 600px; /* Max width for testimonials */
+    margin: auto; /* Centering testimonials */
+    padding: 20px; /* Padding inside each testimonial */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow around elements */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+    margin-bottom: 1.5rem; /* Adds space below the testimonial box */
+
+
+  }
+  
+    .testimonial:hover {
+        background-color: #f0e1c2; /* Change the background color on hover */
+        color: #333; /* Change the text color on hover */
+        transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+    }
+
+  /* FAQ Section Styling */
+  .landing-faq {
+    margin: 20px auto; /* Top and bottom margins as 20px, left and right as auto to center */
+    background-color: #e4d6be; 
+    padding: 20px 20px; /* Padding around FAQ section */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+    max-width: 80%; /* Adjust the maximum width as needed */
+    
+  }
+  
+  .landing-faq:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+}
+
+  details {
+    margin-bottom: 15px; /* Space between FAQ items */
+  }
+  
+  summary {
+    font-weight: bold; /* Bold font for FAQ questions */
+  }
+  
+
+/* Assigns flex values to make the form two-thirds and profile pic one-third */
+.landing-contact-form {
+    flex: 2; /* Allows the form to grow and fill two parts of the container */
+    margin-right: 200px; /* Adds some space between the form and the image */
+}
+
+
+
+/* Styling for all input types including the submit button */
+.landing-contact-form input,
+.landing-contact-form textarea {
+    width: 100%; /* Makes input fields take the full width of the form container */
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin-bottom: 10px; /* Adds space between input fields */
+}
+
+/* Styling for all input types including the submit button */
+.landing-contact-form input,
+.landing-contact-form textarea {
+    width: 100%; /* Makes input fields take the full width of the form container */
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin-bottom: 10px; /* Adds space between input fields */
+}
+
+.cta-landing-button {
+  width: 100%;
+  box-sizing: border-box; /* Include padding in the width calculation */
+  white-space: normal;
+}
+
+.landing-contact-form input[type="submit"] {
+  width: 100%;
+  font-size: 1.25rem; /* Adjusted font size for readability */
+  padding: 15px 30px; /* Increased padding for a larger button */
+  margin-top: 1rem; /* Space above the button */
+  cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  background-color: #F08080; 
+  border: none; /* No border */
+  color: white; /* White text */
+  border-radius: 5px; /* Slightly rounded corners for a modern look */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern-looking font */
+  text-transform: uppercase; /* Makes text uppercase */
+  letter-spacing: 0.05em; /* Adds spacing between letters */
+}
+
+.landing-contact-form input[type="submit"]:hover {
+  background-color: #C06070; /* A darker shade of blue for hover */
+}
+.landing-contact-form input[type="submit"]:focus {
+  background-color: #C06070; /* A darker shade of blue for hover */
+  outline: none; /* Removes the outline on focus for a clean look */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover for depth */
+}
+
+.section-divider {
+    background: linear-gradient(to left, #eacc9d, #e9a941);
+    height: 2px;
+    width: 100%;
+    margin: 30px 0;
+    
+  }
+
+  .offerings {
+    padding: 0px 0px; 
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+    margin-bottom: 40px;
+  }
+
+.offerings ul {
+  padding-left: 0; /* Removes padding from the left */
+  margin-left: 0; /* Removes margin from the left */
+  list-style-type: none; /* Removes the default list item bullets */
+}
+
+.offerings ul li {
+  border-radius: 10px; /* Add rounded corners with a specified radius */
+  padding: 10px 10px;
+  margin: 10px 0px;
+  background-color: #e4d6be;
+  color: #333; /* Change the text color on hover */
+  transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+  border-radius: 10px; /* Add rounded corners with a specified radius */
+}
+
+.offerings ul li:hover {
+    background-color: #f0e1c2; /* Change the background color on hover */
+    color: #333; /* Change the text color on hover */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */
+}
+
+
+/* CTA Section Styling */
+.cta-section {
+  background-color: #e4d6be; /* A light background that stands out from the rest of the content */
+  border: 2px solid #C06070; /* A subtle border to define the section */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  border-radius: 10px; /* Add rounded corners with a specified radius */
+  padding: 10px 10px; 
+  margin: 50px 0px;
+
+}
+
+.cta-section:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */  
+}
+
+
+/* CTA Link Styling */
+.contact-link {
+  color: #C06070; /* A color that stands out */
+  font-weight: bold; /* Bold text for emphasis */
+  text-decoration: underline; /* Underline to suggest it is clickable */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.contact-link:hover {
+  color: #F08080; /* A color that stands out */
+
+}
+
+/* CTA Text Styling */
+.cta-statement {
+  font-size: 1.2rem; /* Slightly larger font for emphasis */
+  line-height: 1.6; /* Good line height for readability */
+  margin: 0; /* Reset margin for this section */
+  font-weight: bold;
+}
+
+
+ .servicesai {
+    background-color: #e4d6be; /* Change background color on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+    padding: 10px 10px; 
+    margin: 10px 0px;
+
+  }
+  .servicesai p {
+    margin: 0; /* Reset default margins for <p> tags */
+}
+
+  .servicesai:hover {
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */
+  }
+
+  /* Add a global box-shadow setting for card-like elements */
+.card-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow around elements */
+}
+
+.project:hover {
+    background-color: #e4d6be; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+}
+
+.project {
+    padding: 20px; /* Add padding for spacing */
+}
+
+
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Adds space between flex items */
+}
+
+.about-text {
+  padding: 20px;
+  background-color: #e4d6be;
+  border-radius: 10px;
+  position: relative;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 5px; /* Remove default top margin */
+  margin-bottom: 1.5rem; /* Space between paragraphs */
+}
+
+.professional-photo {
+    flex: 1 1 35%; /* Flex grow, flex shrink, flex basis */
+    width: auto; /* Maintains aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.about-text, .professional-photo {
+  flex: 1; /* Assign flex 1 to both text and image for equal sharing */
+  margin-top: 10px; /* Ensure no top margin is causing misalignment */
+}
+
+.about-text:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    border-radius: 10px; /* Add rounded corners with a specified radius */
+
+}
+
+.professional-photo {
+    float: inline-start; /* Make the image float to the left */
+    margin-right: 20px; /* Add space between the image and the text */
+    width: 200px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Apply border-radius directly to the image */
+    align-self: flex-start; /* Align this item to the top */
+
+}
+
+.portfolio-head {
+    max-width: 100%; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center-align the content within the available space */
+    padding: 0 10px; /* Add proportional padding on the left and right */
+    font-size: 1.7rem; /* Example size for the main heading */
+
+}
+
+.text-container {
+    max-width: 90%; /* Adjust the maximum width as needed */
+    margin: 0 left; /* Center-align the text content */
+    padding: 0 20px; /* Add proportional padding on the left and right */
+
+}
+
+
+
+/* Hamburger menu */
+.hamburger {
+    display: none; /* Hidden by default, will be shown in media query for mobile */
+    font-size: 24px; /* Size of the hamburger icon */
+    background: none;
+    border: none;
+    color: white; /* Color of the hamburger icon */
+    cursor: pointer;
+  }
+
+/* CONTACT TAB */
+  .contact-container {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .contact-container h1 {
+    text-align: left;
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Optional: if you want the font to be bold */
+    margin-bottom: 1rem; /* Adds some space below the header */
+    color: #333; /* Adjust the color as desired */
+  }
+
+  /* Ensures the container of form and image uses flexbox to align children */
+  .landing-contact-container {
+    display: flex;
+    flex-direction: row; /* Align children in a row */
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Space between form and image */
+    width: 100%; /* Ensure it spans the full width of its parent */
+  }
+
+  /* Ensure the form container takes up 2/3 of the space and profile picture 1/3 */
+  .form-container {
+    flex: 2; /* Takes up 2 parts of the available space */
+    max-width: 75%; /* Optionally restrict max width to 2/3 of parent */
+  }
+  .profile-pic {
+    width: 275px; /* Set your desired width in pixels */
+    height: 275px; /* Set height to the same value to maintain the aspect ratio */
+    border-radius: 50%; /* Keeps the image round */
+    margin-left: 200px; /* Adjust if needed for spacing */
+    object-fit: cover; /* This ensures the image covers the area without distortion */
+    align-self: center; /* This centers the profile picture vertically within the flex container */
+  }
+    
+.form-container iframe {
+  max-width: 100%;
+}
+
+.privacy-statement {
+display: block;
+text-align: center;
+margin-top: 20px; /* Optional: Adds some space above the privacy statement */
+}
+
+
+
+/* Media query for mobile screens */
+@media (max-width: 1024px) {
+    body {
+        padding-top: 60px; /* Reduced padding to account for a smaller nav bar height */
+    }
+
+    nav {
+        flex-direction: column; /* Stack the brand and the links vertically */
+        padding: 10px; /* Reduced padding */
+        align-items: flex-start; /* Align items to the start of the nav bar */
+        padding-top: 0px; /* Add padding to the bottom */
+        padding-bottom: 30px; /* Add padding to the bottom */
+
+    }
+
+    .navbar-brand {
+        margin-left: 10px; /* Align brand to the left */
+        font-size: 1.2em; /* Smaller font size for the brand name */
+        padding: 0; /* Remove padding */
+
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon on mobile */
+        position: absolute;
+        top: 15px; /* Adjust as needed */
+        right: 25px; /* Adjust as needed */
+        z-index: 2000; /* Ensure it's above other content */
+    }
+
+    /* Initially hide the navigation links on mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column; /* Align links vertically */
+        width: 100%; /* Full width */
+        padding-top: 10px; /* Space below the brand name */
+        transition: transform 0.3s; /* Animate the transform property */
+
+    }
+
+    /* Show navigation links when 'open' class is added */
+    .nav-links.open {
+        display: flex; /* Display the flex container */
+        flex-direction: column; /* Stack the links vertically */
+        transform: translateY(0%); /* Reset any transformation */
+        background-color: #333; /* Same color as the nav bar for consistency */
+        width: 100%; /* Ensure it spans the full width */
+        position: absolute; /* Position it absolutely within the nav */
+        top: 60px; /* Position below the navbar-brand */
+        left: 0;
+        padding-top: 0; /* Adjust or remove padding if not needed */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for better visibility */
+      }
+
+    /* Style adjustments for individual nav links on mobile */
+    nav a {
+        text-align: left; /* Align text to the left */
+        padding: 10px 20px; /* Larger clickable area */
+        width: 100%; /* Full width for each link */
+
+    }
+
+    /* Ensure the active state doesn't apply a background to the brand */
+    .navbar-brand a.active {
+        background-color: transparent;
+    }
+
+    .project {
+        background-color: #e4d6be; /* Apply the hover background color by default */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply the hover box shadow by default */
+        border-radius: 10px; /* Apply the hover border radius by default */
+    }
+
+    .landing-contact-container {
+      flex-direction: column; /* Stack form and image vertically */
+      align-items: center; /* Center align the items horizontally */
+    }
+  
+    .form-container, .profile-pic {
+      max-width: 100%; /* Both form and image take full width */
+      margin-left: 0; /* Reset left margin for the image */
+      margin-right: 0; /* Reset right margin for the image, if you've set one */
+      margin-bottom: 20px; /* Adds some space below each item when stacked */
+    }
+
+    .benefit {
+      flex-direction: column; /* Stack children vertically */
+      align-items: center; /* Center items horizontally for mobile */
+      background-color: #e4d6be; /* Change background color on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+      border-radius: 10px; /* Add rounded corners with a specified radius */
+  }
+  
+  .benefit img {
+    /* Adjust width and padding for mobile */
+    width: auto; /* Allow the image to scale with the container */
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    padding: 10px; /* Optional: Adjust padding if necessary */
+    margin-bottom: 20px; /* Space between the image and the next element */
+    
+  }
+  .testimonial {
+    background-color: #f0e1c2; /* Change the background color on hover */
+    color: #333; /* Change the text color on hover */
+
+}
+  }
+ 
+  
+
+/*
+@media (max-width: 768px) {
+    .professional-photo {
+        float: none; /* Stop floating on small screens 
+        margin: 0 auto; /* Center the image 
+        display: block;
+    }
+}
+
+
+/* Adjust media query for responsive text sizes if needed 
+@media (max-width: 768px) {
+    .landing-header h1 {
+      font-size: 2.5rem; /* Smaller size for mobile 
+    }
+  
+    .landing-header p {
+      font-size: 1.25rem; /* Smaller size for mobile 
+    }
+  
+    .landing-header button {
+      font-size: 1rem; /* Smaller size for mobile 
+    }
+  }  */
+
+/*
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-form, .contact-image {
+      flex-basis: 100%;
+    }
+  }
+  */
