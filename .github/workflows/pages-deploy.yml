@@ -30,10 +30,10 @@ jobs:
         cd blog
         bundle exec jekyll build
         mkdir -p ../_site/blog  # Ensure the destination directory exists
-        mv _site/* ../_site/blog  # Move the built site to the main _site directory
+        mv _site/* ../_site/blog/  # Move the built site to the main _site/blog directory
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4  # Use the updated version that supports Node.js 20
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site
