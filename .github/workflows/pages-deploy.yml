@@ -16,7 +16,7 @@ jobs:
         submodules: true  # Fetch submodules
 
     - name: Setup Ruby
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.1
 
