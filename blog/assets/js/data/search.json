@@ -1,0 +1,21 @@
+[
+  
+  {
+    "title": "Test Post",
+    "url": "/blog/posts/test-post/",
+    "categories": "test, example",
+    "tags": "test, example",
+    "date": "2024-05-16 12:00:00 +0000",
+    
+
+
+
+
+
+    
+    "snippet": "Test PostThis is a test post to verify the setup of the Jekyll blog.",
+    "content": "Test PostThis is a test post to verify the setup of the Jekyll blog."
+  }
+  
+]
+
