@@ -3,7 +3,7 @@ name: Build and Deploy Site
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -29,7 +29,8 @@ jobs:
       run: |
         cd blog
         bundle exec jekyll build
-        mv _site ../_site/blog  # Move the built site to the main _site directory
+        mkdir -p ../_site/blog  # Ensure the destination directory exists
+        mv _site/* ../_site/blog  # Move the built site to the main _site directory
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
