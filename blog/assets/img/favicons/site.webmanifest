@@ -1,9 +1,9 @@
 
 
 {
-  "name": "A Data Scientist Goes Free(lance)",
-  "short_name": "A Data Scientist Goes Free(lance)",
-  "description": "A minimal, responsive and feature-rich Jekyll theme for technical writing.",
+  "name": "John Slough's Blog",
+  "short_name": "John Slough's Blog",
+  "description": "usually data science related, often regarding setting up freelancing services",
   "icons": [
     {
       "src": "/blog/assets/img/favicons/android-chrome-192x192.png",

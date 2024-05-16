@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://sloughje.github.io/blog/sitemap.xml
+Sitemap: https://jsdatascience.com/blog/sitemap.xml
