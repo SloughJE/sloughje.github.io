@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - master
+      - master # Triggers on push to the main or master branch of your repository. Change if your branch is not one of these
     paths-ignore:
       - .gitignore
       - README.md
@@ -12,7 +12,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-permissions:
+permissions: # set permissions here so we don't have to do it manually
   contents: read
   pages: write
   id-token: write
@@ -46,11 +46,13 @@ jobs:
       run: |
         cd blog
         bundle install
+    # above command installs everything necessary for Jekyll/Chirpy in the `blog` directory
 
     - name: Build Blog Site
       run: |
         cd blog
         bundle exec jekyll build -d "../_site/blog"
+      # above command builds the Jekyll site in the `blog` directory, so it's served as https://yourwebsite.com/blog
       env:
         JEKYLL_ENV: "production"
 
@@ -60,22 +62,24 @@ jobs:
         cp style.css _site/
         cp -r assets _site/
         cp CNAME _site/
-      # Copies the necessary static files from the main repo into the _site directory so they are included in deployment.
+      # above copies the necessary static files from the main repo into the _site directory so they are included in deployment.
+      # this is the original website and all necessary files to render it
       # CNAME file is needed if using custom domain
-      # My website uses style.css and files in the `assets` directory
+      # My website uses style.css and files in the `assets` directory. Change per your requirements
 
     - name: Upload site artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: "_site${{ steps.pages.outputs.base_path }}"
+    # above uploads built site to GitHub Actions, allows next step to access and publish the files
 
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }} # URL of the deployed site
     runs-on: ubuntu-latest
-    needs: build
+    needs: build  # Ensures the build job completes before deployment
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # deploy
