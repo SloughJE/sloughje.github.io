@@ -3,48 +3,91 @@ name: Build and Deploy Site
 on:
   push:
     branches:
-      - master  # Trigger on the master branch of your main repository
+      - main
+      - master  # Trigger on push to the main or master branch of your repository. Change if your branch is not one of these
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        submodules: true  # Fetch submodules
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Fetch submodules
 
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.3
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
 
-    - name: Install dependencies
-      run: |
-        cd blog
-        bundle install
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
 
-    - name: Build Blog Site
-      run: |
-        cd blog
-        bundle exec jekyll build
-        mkdir -p ../_site/blog   
-        mv _site/* ../_site/blog/  
-      # Move the built blog site to the main _site/blog directory
-      # Ensure the destination directory exists
-      
-    - name: Copy Static Site Files
-      run: |
-        cp index.html _site/
-        cp style.css _site/
-        cp -r assets _site/
-        cp CNAME _site/
+      - name: Install dependencies
+        run: |
+          cd blog
+          bundle install
+        # Installs everything necessary for Jekyll/Chirpy in the `blog` directory
 
+      - name: Build Blog Site
+        run: |
+          cd blog
+          bundle exec jekyll build
+          mkdir -p ../_site/blog  # Ensure the destination directory exists
+          mv _site/* ../_site/blog/  # Move the built blog site to the main _site/blog directory
+        env:
+          JEKYLL_ENV: "production"
+        # Builds the Jekyll site in the `blog` directory and outputs to ../_site/blog
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
-        publish_branch: gh-pages  # Ensure this is set to gh-pages
+      #- name: Test site
+      #  run: |
+      #    cd blog
+      #    bundle exec htmlproofer ../_site/blog \
+      #      --disable-external \
+      #      --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+        # Tests the built site for HTML issues
+
+      - name: Copy Static Site Files
+        run: |
+          cp index.html _site/
+          cp style.css _site/
+          cp -r assets _site/
+          cp CNAME _site/
+        # Copies the necessary static files from the main repo into the _site directory so they are included in deployment.
+        # This includes the original website and all necessary files to render it
+        # CNAME file is needed if using a custom domain
+        # My website uses style.css and files in the `assets` directory. Change per your requirements
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+        # Uploads built site to GitHub Actions, allows next step to access and publish the files
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # URL of the deployed site
+    runs-on: ubuntu-latest
+    needs: build  # Ensures the build job completes before deployment
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # deploy
