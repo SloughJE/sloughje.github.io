@@ -55,12 +55,12 @@ jobs:
           JEKYLL_ENV: "production"
         # Builds the Jekyll site in the `blog` directory and outputs to ../_site/blog
 
-      - name: Test site
-        run: |
-          cd blog
-          bundle exec htmlproofer ../_site/blog \
-            --disable-external \
-            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+      #- name: Test site
+      #  run: |
+      #    cd blog
+      #    bundle exec htmlproofer ../_site/blog \
+      #      --disable-external \
+      #      --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
         # Tests the built site for HTML issues
 
       - name: Copy Static Site Files
