@@ -4,7 +4,7 @@
   <id>https://jsdatascience.com/blog/</id>
   <title>John Slough's Blog</title>
   <subtitle>usually data science related, often regarding setting up freelancing services</subtitle>
-  <updated>2024-05-16T17:34:40-04:00</updated>
+  <updated>2024-05-18T18:15:46-04:00</updated>
   <author>
     <name>John Slough</name>
     <uri>https://jsdatascience.com/blog/</uri>
@@ -17,6 +17,40 @@
   <icon>/blog/assets/img/favicons/favicon.ico</icon>
   <logo>/blog/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Chirpy Blog Integration as a Subdirectory</title>
+    <link href="https://jsdatascience.com/blog/posts/chirpy-install/" rel="alternate" type="text/html" title="Chirpy Blog Integration as a Subdirectory" />
+    <published>2024-05-17T08:00:00-04:00</published>
+  
+    <updated>2024-05-17T08:00:00-04:00</updated>
+  
+    <id>https://jsdatascience.com/blog/posts/chirpy-install/</id>
+    <content src="https://jsdatascience.com/blog/posts/chirpy-install/" />
+    <author>
+      <name>John Slough</name>
+    </author>
+
+  
+    
+    <category term="test" />
+    
+    <category term="example" />
+    
+  
+
+  <summary>Integrating Chirpy Jekyll Theme into an Existing GitHub Pages Blog Subdirectory
+
+Introduction
+
+This guide details the process of integrating the Chirpy Jekyll static website theme into an existing GitHub Pages site as a subdirectory (/blog).
+
+The setup aims to maintain the main site on GitHub Pages while adding a blog powered by Jekyll and the Chirpy theme.
+
+Starting Point: An existing GitHub P...</summary>
+
+  </entry>
 
   
   <entry>
