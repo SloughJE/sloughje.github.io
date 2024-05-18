@@ -32,18 +32,18 @@
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Chirpy Blog Integration as a Subdirectory" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Integrating Chirpy Jekyll Theme into an Existing GitHub Pages Blog Subdirectory" />
-<meta property="og:description" content="Integrating Chirpy Jekyll Theme into an Existing GitHub Pages Blog Subdirectory" />
+<meta name="description" content="Integrating Chirpy Jekyll Theme Blog into an Existing GitHub Pages as a Subdirectory" />
+<meta property="og:description" content="Integrating Chirpy Jekyll Theme Blog into an Existing GitHub Pages as a Subdirectory" />
 <link rel="canonical" href="https://jsdatascience.com/blog/posts/chirpy-install/" />
 <meta property="og:url" content="https://jsdatascience.com/blog/posts/chirpy-install/" />
 <meta property="og:site_name" content="John Slough’s Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-05-17T08:00:00-04:00" />
+<meta property="article:published_time" content="2024-05-18T08:00:00-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Chirpy Blog Integration as a Subdirectory" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-17T08:00:00-04:00","datePublished":"2024-05-17T08:00:00-04:00","description":"Integrating Chirpy Jekyll Theme into an Existing GitHub Pages Blog Subdirectory","headline":"Chirpy Blog Integration as a Subdirectory","mainEntityOfPage":{"@type":"WebPage","@id":"https://jsdatascience.com/blog/posts/chirpy-install/"},"url":"https://jsdatascience.com/blog/posts/chirpy-install/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-18T08:00:00-04:00","datePublished":"2024-05-18T08:00:00-04:00","description":"Integrating Chirpy Jekyll Theme Blog into an Existing GitHub Pages as a Subdirectory","headline":"Chirpy Blog Integration as a Subdirectory","mainEntityOfPage":{"@type":"WebPage","@id":"https://jsdatascience.com/blog/posts/chirpy-install/"},"url":"https://jsdatascience.com/blog/posts/chirpy-install/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -556,28 +556,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -637,28 +615,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -666,49 +622,6 @@
   
   
 
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
   
 
   
@@ -743,13 +656,13 @@
 
 <time
   
-  data-ts="1715947200"
+  data-ts="1716033600"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  May 17, 2024
+  May 18, 2024
 </time>
 
       </span>
@@ -798,9 +711,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="957 words"
+  title="1140 words"
 >
-  <em>5 min</em> read</span>
+  <em>6 min</em> read</span>
 
         </div>
       </div>
@@ -808,18 +721,26 @@
   </header>
 
   <div class="content">
-    <h1 id="integrating-chirpy-jekyll-theme-into-an-existing-github-pages-blog-subdirectory">Integrating Chirpy Jekyll Theme into an Existing GitHub Pages Blog Subdirectory</h1>
+    <h1 id="integrating-chirpy-jekyll-theme-blog-into-an-existing-github-pages-as-a-subdirectory">Integrating Chirpy Jekyll Theme Blog into an Existing GitHub Pages as a Subdirectory</h1>
 
-<h2 id="introduction"><span class="me-2">Introduction</span><a href="#introduction" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>I had already built my static website and deployed it using GitHub Pages. It redirects to <a href="http://www.jsdatascience.com">www.jsdatascience.com</a>.</p>
 
-<p>This guide details the process of integrating the Chirpy Jekyll static website theme into an existing GitHub Pages site as a subdirectory (<code class="language-plaintext highlighter-rouge">/blog</code>).</p>
+<p>I wanted to create a blog or similarly structured site to post information about some of the personal data science projects I’ve been working on and perhaps some related topics.</p>
 
-<p>The setup aims to maintain the main site on GitHub Pages while adding a blog powered by Jekyll and the Chirpy theme.</p>
+<p>Given that I already had a website deployed using GitHub Pages, I wanted to find a tool to create the blog in a similar way.</p>
+
+<p>I came across the Chirpy theme for Jekyll, a tool that generates static websites from text files. Exactly what I wanted.
+The Chirpy theme is minimal, without excessive styling. Good.</p>
+
+<p>Now I just needed to figure out how to get the Chirpy blog theme working as a subdirectory of my home page, ie <a href="http://www.jsdatascience.com/blog">www.jsdatascience.com/blog</a>.</p>
+
+<h2 id="guide"><span class="me-2">Guide</span><a href="#guide" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>This guide details the process of integrating the Chirpy Jekyll static website theme into an existing GitHub Pages site as a subdirectory (<code class="language-plaintext highlighter-rouge">/blog</code>). 
+The setup aims to keep the main site as just a static <code class="language-plaintext highlighter-rouge">index.html</code> page, while adding a blog powered by Jekyll and the Chirpy theme.</p>
 
 <p><strong>Starting Point</strong>: An existing GitHub Pages site with <code class="language-plaintext highlighter-rouge">index.html</code> as the static website
-<strong>Goal</strong>: Add a blog in a subdirectory <code class="language-plaintext highlighter-rouge">/blog</code> using Jekyll and the Chirpy theme so it is accessible under <code class="language-plaintext highlighter-rouge">yourwebiste.com/blog</code>.</p>
-
-<h2 id="step-by-step-guide"><span class="me-2">Step-by-Step Guide</span><a href="#step-by-step-guide" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<strong>Goal</strong>: A blog in a subdirectory <code class="language-plaintext highlighter-rouge">/blog</code> using the Chirpy theme so it is accessible under <code class="language-plaintext highlighter-rouge">yourwebsite.com/blog</code></p>
 
 <h3 id="step-1-initialize-the-blog-directory-as-a-git-submodule-and-clone-the-chirpy-starter"><span class="me-2">Step 1: Initialize the <code class="language-plaintext highlighter-rouge">blog</code> directory as a Git Submodule and Clone the Chirpy Starter</span><a href="#step-1-initialize-the-blog-directory-as-a-git-submodule-and-clone-the-chirpy-starter" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -835,7 +756,7 @@
     <p>It is assumed that this is already a git repository with an existing GitHub Pages site.</p>
   </li>
   <li>
-    <p>Go to <code class="language-plaintext highlighter-rouge">https://github.com/cotes2020/chirpy-starter</code>. Either fork it to your own repo or <code class="language-plaintext highlighter-rouge">Use this template</code>.</p>
+    <p>Go to <code class="language-plaintext highlighter-rouge">https://github.com/cotes2020/chirpy-starter</code>. Either fork it to your own repo or click on <code class="language-plaintext highlighter-rouge">Use this template</code>.</p>
   </li>
   <li>
     <p>In your terminal, add your forked or template chirpy starter repo as a submodule:</p>
@@ -874,7 +795,10 @@
 
 <h3 id="step-2-configure-github-actions-for-deployment"><span class="me-2">Step 2: Configure GitHub Actions for Deployment</span><a href="#step-2-configure-github-actions-for-deployment" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>The <code class="language-plaintext highlighter-rouge">.github/workflows/pages-deploy.yml</code> is a yaml file that tells GitHub how to deploy your website. This is included by default in the chirpy starter files. We need to delete this one and put our own in the main directory.</p>
+<p>The <code class="language-plaintext highlighter-rouge">.github/workflows/pages-deploy.yml</code> is a yaml file that tells GitHub how to deploy your website. This is included by default in the chirpy starter files.</p>
+
+<p>We need to delete this one and put our own in the main directory.</p>
+
 <ol>
   <li>Delete the default one in <code class="language-plaintext highlighter-rouge">blog/.github/workflows/pages-deploy.yml</code>.
     <div class="language-sh highlighter-rouge"><div class="code-header">
@@ -883,7 +807,7 @@
 </pre></td><td class="rouge-code"><pre>git <span class="nb">rm </span>blog/.github/workflows/pages-deploy.yml
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
-  <li>Create a new one in the main directory. The file should look like this:</li>
+  <li>Create a new one in the main directory <code class="language-plaintext highlighter-rouge">.github/workflows/pages-deploy.yml</code>. The file should look like this:</li>
 </ol>
 
 <div class="language-yaml highlighter-rouge"><div class="code-header">
@@ -940,12 +864,63 @@
 50
 51
 52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
 </pre></td><td class="rouge-code"><pre><span class="na">name</span><span class="pi">:</span> <span class="s">Build and Deploy Site</span>
-
 <span class="na">on</span><span class="pi">:</span>
   <span class="na">push</span><span class="pi">:</span>
     <span class="na">branches</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">master</span>  <span class="c1"># Trigger on the master branch of your main repository. Change per your branch</span>
+      <span class="pi">-</span> <span class="s">main</span>
+      <span class="pi">-</span> <span class="s">master</span> <span class="c1"># Triggers on push to the main or master branch of your repository. Change if your branch is not one of these</span>
+    <span class="na">paths-ignore</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">.gitignore</span>
+      <span class="pi">-</span> <span class="s">README.md</span>
+      <span class="pi">-</span> <span class="s">LICENSE</span>
+
+  <span class="c1"># Allows you to run this workflow manually from the Actions tab</span>
+  <span class="na">workflow_dispatch</span><span class="pi">:</span>
+
+<span class="na">permissions</span><span class="pi">:</span> <span class="c1"># set permissions here so we don't have to do it manually</span>
+  <span class="na">contents</span><span class="pi">:</span> <span class="s">read</span>
+  <span class="na">pages</span><span class="pi">:</span> <span class="s">write</span>
+  <span class="na">id-token</span><span class="pi">:</span> <span class="s">write</span>
+
+<span class="c1"># Allow one concurrent deployment</span>
+<span class="na">concurrency</span><span class="pi">:</span>
+  <span class="na">group</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pages"</span>
+  <span class="na">cancel-in-progress</span><span class="pi">:</span> <span class="kc">true</span>
 
 <span class="na">jobs</span><span class="pi">:</span>
   <span class="na">build</span><span class="pi">:</span>
@@ -957,55 +932,81 @@
       <span class="na">with</span><span class="pi">:</span>
         <span class="na">submodules</span><span class="pi">:</span> <span class="kc">true</span>  <span class="c1"># Fetch submodules</span>
 
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Pages</span>
+      <span class="na">id</span><span class="pi">:</span> <span class="s">pages</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/configure-pages@v4</span>
+
     <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Ruby</span>
       <span class="na">uses</span><span class="pi">:</span> <span class="s">ruby/setup-ruby@v1</span>
       <span class="na">with</span><span class="pi">:</span>
-        <span class="na">ruby-version</span><span class="pi">:</span> <span class="m">3.1</span>
+        <span class="na">ruby-version</span><span class="pi">:</span> <span class="m">3.3</span>
+        <span class="na">bundler-cache</span><span class="pi">:</span> <span class="kc">true</span>
 
     <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install dependencies</span>
       <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
         <span class="s">cd blog</span>
-        <span class="s">bundle install </span>
-    <span class="c1"># above command installs everything necessary for Jekyll/Chirpy in the `blog` directory</span>
+        <span class="s">bundle install</span>
+    <span class="c1"># Installs everything necessary for Jekyll/Chirpy in the `blog` directory</span>
 
     <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build Blog Site</span>
       <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
         <span class="s">cd blog</span>
-        <span class="s">bundle exec jekyll build</span>
-        <span class="s">mkdir -p ../_site/blog  # Ensure the destination directory exists</span>
-        <span class="s">mv _site/* ../_site/blog/  # Move the built blog site to the main _site/blog directory</span>
-    <span class="c1"># above command builds the Jekyll site in the `blog` directory, so it's served as https://yourwebsite.com/blog</span>
+        <span class="s">bundle exec jekyll build -d "../_site/blog"</span>
+      <span class="c1"># Builds the Jekyll site in the `blog` directory, so it's served as https://yourwebsite.com/blog</span>
+      <span class="na">env</span><span class="pi">:</span>
+        <span class="na">JEKYLL_ENV</span><span class="pi">:</span> <span class="s2">"</span><span class="s">production"</span>
 
     <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Copy Static Site Files</span>
       <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
         <span class="s">cp index.html _site/</span>
         <span class="s">cp style.css _site/</span>
         <span class="s">cp -r assets _site/</span>
-        <span class="s">cp CNAME _site/ </span>
-    <span class="c1"># Copies the necessary static files from the main repo into the _site directory so they are included in deployment.</span>
-    <span class="c1"># CNAME file is needed if using custom domain</span>
-    <span class="c1"># My webiste uses style.css and files in the `assets` directory</span>
+        <span class="s">cp CNAME _site/</span>
+      <span class="c1"># Copies the necessary static files from the main repo into the _site directory so they are included in deployment.</span>
+      <span class="c1"># This includes the original website and all necessary files to render it</span>
+      <span class="c1"># CNAME file is needed if using a custom domain</span>
+      <span class="c1"># My website uses style.css and files in the `assets` directory. Change per your requirements</span>
 
-    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to GitHub Pages</span>
-      <span class="na">uses</span><span class="pi">:</span> <span class="s">peaceiris/actions-gh-pages@v4</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload site artifact</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/upload-pages-artifact@v3</span>
       <span class="na">with</span><span class="pi">:</span>
-        <span class="na">github_token</span><span class="pi">:</span> <span class="s">$</span> <span class="c1"># you may need to update your permissions to allow github actions to write in your repo</span>
-        <span class="na">publish_dir</span><span class="pi">:</span> <span class="s">./_site</span>
-        <span class="na">publish_branch</span><span class="pi">:</span> <span class="s">gh-pages</span>  <span class="c1"># Ensure this is set to gh-pages, (this is the default)</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">_site$"</span>
+      <span class="c1"># Uploads built site to GitHub Actions, allows next step to access and publish the files</span>
+
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">github-pages</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">$</span> <span class="c1"># URL of the deployed site</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">build</span>  <span class="c1"># Ensures the build job completes before deployment</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to GitHub Pages</span>
+        <span class="na">id</span><span class="pi">:</span> <span class="s">deployment</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/deploy-pages@v4</span> <span class="c1"># deploy</span>
+
 </pre></td></tr></tbody></table></code></div></div>
 
+<p>Then we need to just update the git repo with our changes.</p>
 <div class="language-sh highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
+4
 </pre></td><td class="rouge-code"><pre>git add .github/workflows/pages-deploy.yml
+git add blog
 git commit <span class="nt">-m</span> <span class="s2">"Deleting and Adding new deployment workflow"</span>
 git push
 </pre></td></tr></tbody></table></code></div></div>
+<p>A quick explanation about the submodule here:</p>
 
-<h4 id="notes"><span class="me-2">Notes</span><a href="#notes" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-<p>If you are redirecting to a custom URL, make sure to include the CNAME file (ie a file named “CNAME”) in the main directory. The CNAME file specifies the custom domain for your GitHub Pages site. The file would just contain, for example:</p>
+<p><code class="language-plaintext highlighter-rouge">git rm blog/.github/workflows/pages-deploy.yml</code>: This command removes the file from the submodule directory and stages the removal.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git add blog</code>: This command stages the updated submodule reference in the main repository. It ensures that the main repository knows about the changes made within the submodule.</p>
+
+<p>Now the main repository is aware of the changes made within the submodule, and the updated state of the submodule is correctly reflected in the main repository.</p>
+
+<p>Also note that if you are redirecting to a custom URL, make sure to include the CNAME file (ie a file named “CNAME”) in the main directory. The CNAME file specifies the custom domain for your GitHub Pages site. The file would just contain, for example:</p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1014,131 +1015,18 @@ git push
 </pre></td></tr></tbody></table></code></div></div>
 
 <h3 id="step-3-configure-github-pages"><span class="me-2">Step 3: Configure GitHub Pages</span><a href="#step-3-configure-github-pages" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-<p>Ensure GitHub Pages is configured to build from the root directory or the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch, depending on your setup.
-Go to your main repo, click on <code class="language-plaintext highlighter-rouge">Settings</code> and then <code class="language-plaintext highlighter-rouge">Pages</code> on the left. It will probably be set to deploy from a branch. I just leave it on default <code class="language-plaintext highlighter-rouge">gh-pages</code> branch.</p>
+<p>Depending on your previous setup, you may or may not need to do this.</p>
+
+<p>Ensure GitHub Pages is configured to build from the root directory or the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch, depending on your setup. This should happen automatically but it may have been changed from the previous website deployment. Go to your website repo, click on <code class="language-plaintext highlighter-rouge">Settings</code>, then <code class="language-plaintext highlighter-rouge">Pages</code> on the left. It will probably be set to <code class="language-plaintext highlighter-rouge">deploy from a branch</code>. I just leave it on the default <code class="language-plaintext highlighter-rouge">gh-pages</code> branch.</p>
 
 <h3 id="step-4-access-your-blog"><span class="me-2">Step 4: Access Your Blog</span><a href="#step-4-access-your-blog" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <p>Push all your changes to your main repo.
-Once GitHub Pages has processed your changes and deployed the new build of your website, you should be able to access your blog at <code class="language-plaintext highlighter-rouge">https://yourwebsite.com/blog</code>.</p>
+Click on <code class="language-plaintext highlighter-rouge">Actions</code> on your website’s repo and watch it being built.
+Once GitHub Pages has processed your changes, built and deployed the new build of your website, you should be able to access your blog at <code class="language-plaintext highlighter-rouge">https://yourwebsite.com/blog</code>.</p>
 
-<h3 id="step-4-docker-setup-for-jekyll-development"><span class="me-2">Step 4: Docker Setup for Jekyll Development</span><a href="#step-4-docker-setup-for-jekyll-development" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>That’s how I was able to do it. Hopefully it will work for you!</p>
 
-<p>Create the necessary Docker setup files in the <code class="language-plaintext highlighter-rouge">blog</code> directory.</p>
-
-<h4 id="dockerfile"><span class="me-2">Dockerfile</span><a href="#dockerfile" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-</pre></td><td class="rouge-code"><pre>```dockerfile
-# Dockerfile
-FROM ruby:3.3.1
-
-# Install Node.js (for Jekyll)
-RUN apt-get update -qq &amp;&amp; apt-get install -y nodejs
-
-# Set working directory
-WORKDIR /usr/src/app
-
-# Copy Gemfile and Gemfile.lock
-COPY Gemfile Gemfile.lock ./
-
-# Install dependencies
-RUN gem install bundler &amp;&amp; bundle install
-
-# Copy the rest of the application code
-COPY . .
-
-# Expose port 4000 for Jekyll
-EXPOSE 4000
-
-# Default command to run Jekyll server
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
-```
-</pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="docker-composeyml"><span class="me-2">docker-compose.yml</span><a href="#docker-composeyml" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-</pre></td><td class="rouge-code"><pre>```yaml
-# docker-compose.yml
-version: '3.7'
-
-services:
-  jekyll:
-    build: .
-    ports:
-      - "4000:4000"
-    volumes:
-      - .:/usr/src/app
-    command: bundle exec jekyll serve --host 0.0.0.0
-```
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="step-5-build-and-run-the-docker-container"><span class="me-2">Step 5: Build and Run the Docker Container</span><a href="#step-5-build-and-run-the-docker-container" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ol>
-  <li>
-    <p>Build the Docker image:</p>
-
-    <div class="language-sh highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre> docker-compose build
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>
-    <p>Run the Docker container:</p>
-
-    <div class="language-sh highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre> docker-compose up
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ol>
-
-<h2 id="conclusion"><span class="me-2">Conclusion</span><a href="#conclusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>By following these steps, you can successfully integrate the Chirpy Jekyll theme into your existing GitHub Pages site as a subdirectory. Using Docker for development ensures that your local environment remains clean and consistent, avoiding dependency conflicts.</p>
+<p>JS</p>
 
   </div>
 
@@ -1148,8 +1036,9 @@ services:
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/blog/categories/test/">test</a>,
-          <a href="/blog/categories/example/">example</a>
+          <a href="/blog/categories/github/">Github</a>,
+          <a href="/blog/categories/web-development/">Web Development</a>,
+          <a href="/blog/categories/jekyll/">Jekyll</a>
       </div>
     
 
@@ -1159,14 +1048,39 @@ services:
         <i class="fa fa-tags fa-fw me-1"></i>
         
           <a
-            href="/blog/tags/test/"
+            href="/blog/tags/jekyll/"
             class="post-tag no-text-decoration"
-          >test</a>
+          >Jekyll</a>
         
           <a
-            href="/blog/tags/example/"
+            href="/blog/tags/chirpy/"
             class="post-tag no-text-decoration"
-          >example</a>
+          >Chirpy</a>
+        
+          <a
+            href="/blog/tags/blog/"
+            class="post-tag no-text-decoration"
+          >blog</a>
+        
+          <a
+            href="/blog/tags/github-pages/"
+            class="post-tag no-text-decoration"
+          >GitHub Pages</a>
+        
+          <a
+            href="/blog/tags/submodule/"
+            class="post-tag no-text-decoration"
+          >Submodule</a>
+        
+          <a
+            href="/blog/tags/tutorial/"
+            class="post-tag no-text-decoration"
+          >Tutorial</a>
+        
+          <a
+            href="/blog/tags/git/"
+            class="post-tag no-text-decoration"
+          >Git</a>
         
       </div>
     
@@ -1274,13 +1188,6 @@ services:
           <a href="/blog/posts/chirpy-install/">Chirpy Blog Integration as a Subdirectory</a>
         </li>
       
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/blog/posts/test-post/">Test Post</a>
-        </li>
-      
     </ul>
   </section>
   <!-- #access-lastmod -->
@@ -1327,6 +1234,191 @@ services:
         
         
 
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
 
 
   <section>
@@ -1334,10 +1426,25 @@ services:
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/blog/tags/example/">example</a>
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/blog/">blog</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/blog/tags/test/">test</a>
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/chirpy/">Chirpy</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/git/">Git</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/github-pages/">GitHub Pages</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/jekyll/">Jekyll</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/submodule/">Submodule</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/tutorial/">Tutorial</a>
       
     </div>
   </section>
@@ -1393,18 +1500,6 @@ services:
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
 
 
@@ -1416,44 +1511,6 @@ services:
 
 
 
-  <aside id="related-posts" aria-labelledby="related-label">
-    <h3 class="mb-4" id="related-label">Further Reading</h3>
-    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/blog/posts/test-post/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1715860800"
-  data-df="ll"
-  
->
-  May 16, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Test Post</h4>
-              <div class="text-muted">
-                <p>Test Post
-
-This is a test post to verify the setup of the Jekyll blog.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-    </nav>
-  </aside>
-  <!-- #related-posts -->
-
 
             
               
@@ -1464,13 +1521,9 @@ This is a test post to verify the setup of the Jekyll blog.</p>
   
 
   
-    <a
-      href="/blog/posts/test-post/"
-      class="btn btn-outline-primary"
-      aria-label="Older"
-    >
-      <p>Test Post</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="Older">
+      <p>-</p>
+    </div>
   
 
   
@@ -1572,6 +1625,191 @@ This is a test post to verify the setup of the Jekyll blog.</p>
         
         
 
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
 
 
   <section>
@@ -1579,10 +1817,25 @@ This is a test post to verify the setup of the Jekyll blog.</p>
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/blog/tags/example/">example</a>
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/blog/">blog</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/blog/tags/test/">test</a>
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/chirpy/">Chirpy</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/git/">Git</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/github-pages/">GitHub Pages</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/jekyll/">Jekyll</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/submodule/">Submodule</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/blog/tags/tutorial/">Tutorial</a>
       
     </div>
   </section>
