@@ -66,7 +66,14 @@ jobs:
       # this is the original website and all necessary files to render it
       # CNAME file is needed if using custom domain
       # My website uses style.css and files in the `assets` directory. Change per your requirements
-
+      
+      - name: Test site
+        run: |
+          bundle exec htmlproofer _site/blog \
+            --disable-external \
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+        # Tests the built site for HTML issues
+    
     - name: Upload site artifact
       uses: actions/upload-pages-artifact@v3
       with:
