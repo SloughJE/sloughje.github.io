@@ -4,16 +4,12 @@ on:
   push:
     branches:
       - main
-      - master # Triggers on push to the main or master branch of your repository. Change if your branch is not one of these
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - LICENSE
+      - master  # Trigger on push to the main or master branch of your repository. Change if your branch is not one of these
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-permissions: # Set permissions here so we don't have to do it manually
+permissions:
   contents: read
   pages: write
   id-token: write
@@ -52,7 +48,9 @@ jobs:
       - name: Build Blog Site
         run: |
           cd blog
-          bundle exec jekyll build -d "../_site/blog"
+          bundle exec jekyll build
+          mkdir -p ../_site/blog  # Ensure the destination directory exists
+          mv _site/* ../_site/blog/  # Move the built blog site to the main _site/blog directory
         env:
           JEKYLL_ENV: "production"
         # Builds the Jekyll site in the `blog` directory and outputs to ../_site/blog
@@ -64,7 +62,7 @@ jobs:
             --disable-external \
             --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
         # Tests the built site for HTML issues
-    
+
       - name: Copy Static Site Files
         run: |
           cp index.html _site/
