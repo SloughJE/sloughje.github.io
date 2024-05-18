@@ -27,45 +27,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        submodules: true  # Fetch submodules
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Fetch submodules
 
-    - name: Setup Pages
-      id: pages
-      uses: actions/configure-pages@v4
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
 
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.3
-        bundler-cache: true
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
 
-    - name: Install dependencies
-      run: |
-        cd blog
-        bundle install
-    # above command installs everything necessary for Jekyll/Chirpy in the `blog` directory
+      - name: Install dependencies
+        run: |
+          cd blog
+          bundle install
+        # above command installs everything necessary for Jekyll/Chirpy in the `blog` directory
 
-    - name: Build Blog Site
-      run: |
-        cd blog
-        bundle exec jekyll build -d "../_site/blog"
-      # above command builds the Jekyll site in the `blog` directory, so it's served as https://yourwebsite.com/blog
-      env:
-        JEKYLL_ENV: "production"
+      - name: Build Blog Site
+        run: |
+          cd blog
+          bundle exec jekyll build -d "../_site/blog"
+        # above command builds the Jekyll site in the `blog` directory, so it's served as https://yourwebsite.com/blog
+        env:
+          JEKYLL_ENV: "production"
 
-    - name: Copy Static Site Files
-      run: |
-        cp index.html _site/
-        cp style.css _site/
-        cp -r assets _site/
-        cp CNAME _site/
-      # above copies the necessary static files from the main repo into the _site directory so they are included in deployment.
-      # this is the original website and all necessary files to render it
-      # CNAME file is needed if using custom domain
-      # My website uses style.css and files in the `assets` directory. Change per your requirements
+      - name: Copy Static Site Files
+        run: |
+          cp index.html _site/
+          cp style.css _site/
+          cp -r assets _site/
+          cp CNAME _site/
+        # above copies the necessary static files from the main repo into the _site directory so they are included in deployment.
+        # this is the original website and all necessary files to render it
+        # CNAME file is needed if using custom domain
+        # My website uses style.css and files in the `assets` directory. Change per your requirements
       
       - name: Test site
         run: |
@@ -74,11 +74,11 @@ jobs:
             --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
         # Tests the built site for HTML issues
     
-    - name: Upload site artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: "_site${{ steps.pages.outputs.base_path }}"
-    # above uploads built site to GitHub Actions, allows next step to access and publish the files
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site${{ steps.pages.outputs.base_path }}"
+        # above uploads built site to GitHub Actions, allows next step to access and publish the files
 
   deploy:
     environment:
@@ -89,4 +89,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 # deploy
+        uses: actions/deploy-pages@v4 # 
